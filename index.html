@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="KCEaPDwbIRkDGBQZA0oTPFMGIHo6eDF2DdoqMsxRPUuo5yCqdVq8H0z2">
+    <title data-default="Home" data-suffix=" · Chattr Pro">Home · Chattr Pro</title>
+    <link phx-track-static rel="stylesheet" href="assets/app-5612c13f1114105276c831560d95798c.css@vsn=d.css">
+    <link rel="icon" href="images/logo-27feefddd3ca69aae916eb6c5d9454ca.svg@vsn=d" type="image/svg+xml" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="images/logo-dark-5cdf73aa0d09f3120ce2f60389220170.svg@vsn=d" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="https://pro.chattr.io/images/favicon.png" type="image/png" media="(prefers-color-scheme: light)"><link rel="icon" href="images/logo-dark-5365a98bda0b1f1e857cdd5da337afff.png@vsn=d" type="image/png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="https://pro.chattr.io/favicon-5eeb948ce9ac61a766aaf53db6ab1f01.ico?vsn=d" sizes="any" type="image/x-icon">
+
+    <script defer phx-track-static type="text/javascript" src="assets/app-2e31e19757652b9b86b41f0d80b18c35.js@vsn=d">
+    </script>
+  </head>
+  <body class="flex flex-col h-full bg-white">
+    <ul class="flex relative z-10 flex-none gap-4 justify-end items-center px-4 sm:px-6 lg:px-8">
+
+        <li>
+          <a href="users/register.html" class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700">
+            Register
+          </a>
+        </li>
+        <li>
+          <a href="users/log_in.html" class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700">
+            Log in
+          </a>
+        </li>
+
+    </ul>
+    <header class="px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-3 text-sm border-b border-zinc-100">
+
+          <div></div>
+
+      </div>
+    </header>
+    <div class="flex overflow-hidden flex-col flex-1">
+      <div id="flash-group">
+  
+  
+  <div id="client-error" phx-click="[[&quot;push&quot;,{&quot;value&quot;:{&quot;key&quot;:&quot;error&quot;},&quot;event&quot;:&quot;lv:clear-flash&quot;}],[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#client-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-in&quot;,&quot;duration-200&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;]]}]]" role="alert" class="fixed top-2 right-2 mr-2 w-80 sm:w-96 z-50 rounded-lg p-3 ring-1 bg-rose-50 text-rose-900 shadow-md ring-rose-500 fill-rose-900" hidden phx-connected="[[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#client-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-in&quot;,&quot;duration-200&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;]]}]]" phx-disconnected="[[&quot;show&quot;,{&quot;time&quot;:300,&quot;to&quot;:&quot;.phx-client-error #client-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-out&quot;,&quot;duration-300&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;]]}]]">
+  <p class="flex gap-1.5 items-center text-sm font-semibold leading-6">
+    
+    <span class="hero-exclamation-circle-mini w-4 h-4"></span>
+    Can&#39;t connect to server
+  </p>
+  <p class="mt-2 text-sm leading-5">
+    Attempting to reconnect
+    <span class="hero-arrow-path ml-1 w-3 h-3 animate-spin"></span>
+  </p>
+  <button type="button" class="absolute top-1 right-1 p-2 group" aria-label="close">
+    <span class="hero-x-mark-solid w-5 h-5 opacity-40 group-hover:opacity-70"></span>
+  </button>
+</div>
+
+  <div id="server-error" phx-click="[[&quot;push&quot;,{&quot;value&quot;:{&quot;key&quot;:&quot;error&quot;},&quot;event&quot;:&quot;lv:clear-flash&quot;}],[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#server-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-in&quot;,&quot;duration-200&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;]]}]]" role="alert" class="fixed top-2 right-2 mr-2 w-80 sm:w-96 z-50 rounded-lg p-3 ring-1 bg-rose-50 text-rose-900 shadow-md ring-rose-500 fill-rose-900" hidden phx-connected="[[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#server-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-in&quot;,&quot;duration-200&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;]]}]]" phx-disconnected="[[&quot;show&quot;,{&quot;time&quot;:300,&quot;to&quot;:&quot;.phx-server-error #server-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-out&quot;,&quot;duration-300&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;]]}]]">
+  <p class="flex gap-1.5 items-center text-sm font-semibold leading-6">
+    
+    <span class="hero-exclamation-circle-mini w-4 h-4"></span>
+    Something went wrong!
+  </p>
+  <p class="mt-2 text-sm leading-5">
+    Hang in there while we get back on track
+    <span class="hero-arrow-path ml-1 w-3 h-3 animate-spin"></span>
+  </p>
+  <button type="button" class="absolute top-1 right-1 p-2 group" aria-label="close">
+    <span class="hero-x-mark-solid w-5 h-5 opacity-40 group-hover:opacity-70"></span>
+  </button>
+</div>
+</div>
+<div class="left-[40rem] fixed inset-y-0 right-0 z-0 hidden lg:block xl:left-[50rem]">
+  <svg viewBox="0 0 1480 957" fill="none" aria-hidden="true" class="absolute inset-0 w-full h-full" preserveAspectRatio="xMinYMid slice">
+    <path fill="#EE7868" d="M0 0h1480v957H0z"></path>
+    <path d="M137.542 466.27c-582.851-48.41-988.806-82.127-1608.412 658.2l67.39 810 3083.15-256.51L1535.94-49.622l-98.36 8.183C1269.29 281.468 734.115 515.799 146.47 467.012l-8.928-.742Z" fill="#FF9F92"></path>
+    <!-- ... other SVG paths ... -->
+  </svg>
+</div>
+
+<div class="px-4 py-10 sm:px-6 sm:py-28 lg:px-8 xl:px-28 xl:py-32">
+  <div class="mx-auto max-w-xl lg:mx-0">
+    <h1 class="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
+      ChattrPro
+    </h1>
+    <p class="mt-4 text-xl text-zinc-600">
+      Advancing Human-Computer Interaction Research
+    </p>
+
+    <div class="mt-10 space-y-8">
+      <div class="p-6 bg-white rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-zinc-900">Our Research Focus</h2>
+        <p class="mt-4 text-zinc-600">
+          ChattrPro is a platform dedicated to scientific research on human-computer interaction.
+          We enable the study of humans interaction with conversational AI systems to improve user experiences
+          and develop more effective communication interfaces.
+        </p>
+      </div>
+
+      <div class="p-6 bg-white rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-zinc-900">Research Capabilities</h2>
+        <div class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <h3 class="text-lg font-medium text-zinc-900">Experiment Design</h3>
+              <p class="mt-1 text-sm text-zinc-600">
+                Create controlled experiments to test hypotheses about human-AI interaction.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <h3 class="text-lg font-medium text-zinc-900">Data Collection</h3>
+              <p class="mt-1 text-sm text-zinc-600">
+                Gather rich interaction data through our specialized chat interfaces.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <h3 class="text-lg font-medium text-zinc-900">Analysis Tools</h3>
+              <p class="mt-1 text-sm text-zinc-600">
+                (IN PROGRESS) Analyze conversation patterns and user behavior with our integrated tools.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <h3 class="text-lg font-medium text-zinc-900">Model Integration</h3>
+              <p class="mt-1 text-sm text-zinc-600">
+                Connect with various AI models to test different interaction paradigms.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-zinc-900">Get Started</h2>
+        <p class="mt-4 text-zinc-600">
+          Interested in participating in our research or using our platform for your own studies?
+
+            <span class="font-bold">
+              During the current Beta, register for an account and contact
+              <a href="mailto:pro.admin@chattr.io?subject=Creator privileges&body=This system is designed for research. You provide your own ChatGPT API keys to pay for your research subjects to interact. Help us get to know you.%0D%0A* Name: %0D%0A* Research institution: %0D%0A* Research goals: ">
+                pro.admin@chattr.io
+              </a>
+              to request creator privileges.
+            </span>
+
+        </p>
+        <div class="flex flex-col mt-6 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+
+            <a href="users/register.html" class="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-white rounded-md border border-transparent shadow-sm bg-brand hover:bg-brand/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">
+              Register for an account
+            </a>
+            <a href="users/log_in.html" class="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md border border-gray-300 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">
+              Log In
+            </a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-8 mt-10 border-t border-zinc-200">
+      <p class="text-sm text-zinc-500">
+        © 2025 ChattrPro. All rights reserved.
+      </p>
+    </div>
+  </div>
+</div>
+    </div>
+  </body>
+</html>
