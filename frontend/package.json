@@ -1,0 +1,45 @@
+{
+  "name": "chattr_frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+ "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "serve": "vite preview"
+},
+
+
+  "dependencies": {
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@sentry/react": "^7.64.0",
+    "classnames": "^2.3.2",
+    "copy-container-react": "^1.0.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.4",
+    "react-markdown": "^9.0.0",
+    "react-redux": "^8.1.1",
+    "react-router-dom": "^6.14.2",
+    "react-spinners": "^0.13.8",
+    "react-syntax-highlighter": "^15.5.0",
+    "redux-persist": "^6.0.0",
+    "remark-gfm": "^4.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.4",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.9"
+  }
+}
