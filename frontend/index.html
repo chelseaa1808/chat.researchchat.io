@@ -15,13 +15,13 @@
     <script type="module" src="/static/assets/index.js"></script>
   </head>
 
-  <body class="flex flex-col min-h-screen bg-white">
+  <body class="flex flex-col min-h-screen bg-background font-sans">
     <header class="px-4 sm:px-6 lg:px-8 py-4 border-b border-gray-200">
       <div class="flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-zinc-900">Research Chat</h1>
+        <h1 class="text-2xl font-bold text-primary">Research Chat</h1>
         <nav class="flex space-x-4">
-          <a href="/users/register" class="text-sm font-semibold text-zinc-900 hover:text-zinc-700">Register</a>
-          <a href="/users/log_in" class="text-sm font-semibold text-zinc-900 hover:text-zinc-700">Log In</a>
+          <a href="/users/register" class="text-sm font-semibold text-primary hover:text-gray-600">Register</a>
+          <a href="/users/log_in" class="text-sm font-semibold text-primary hover:text-gray-600">Log In</a>
         </nav>
       </div>
     </header>
@@ -29,14 +29,14 @@
     <main class="flex-1 px-4 py-10 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto space-y-12">
         <section>
-          <h2 class="text-3xl font-bold text-zinc-900">Our Research Focus</h2>
+          <h2 class="text-3xl font-bold text-primary">Our Research Focus</h2>
           <p class="mt-4 text-lg text-zinc-600">
             We study human-AI interaction to improve communication interfaces using advanced chat systems and behavioral analysis.
           </p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-semibold text-zinc-900">Capabilities</h2>
+          <h2 class="text-2xl font-semibold text-primary">Capabilities</h2>
           <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-6 text-zinc-700">
             <li>
               <strong>Experiment Design</strong><br />
@@ -58,15 +58,19 @@
         </section>
 
         <section>
-          <h2 class="text-2xl font-semibold text-zinc-900">Get Started</h2>
+          <h2 class="text-2xl font-semibold text-primary">Get Started</h2>
           <p class="mt-4 text-zinc-600">
             Register and contact us to gain researcher access.<br />
-            Email: <a href="mailto:pro.admin@chattr.io" class="text-brand underline">pro.admin@chattr.io</a>
+            Email: <a href="mailto:pro.admin@chattr.io" class="text-accent underline">pro.admin@chattr.io</a>
           </p>
 
-          <div class="mt-6 flex space-x-4">
-            <a href="/users/register" class="px-4 py-2 bg-brand text-white font-medium rounded-md hover:bg-brand/90">Register</a>
-            <a href="/users/log_in" class="px-4 py-2 border border-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-50">Log In</a>
+          <div class="mt-6 flex flex-col sm:flex-row gap-4">
+            <a href="/users/register" class="px-4 py-2 bg-accent text-white font-medium rounded-md hover:bg-accent/90">
+              Register
+            </a>
+            <a href="/users/log_in" class="px-4 py-2 border border-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-50">
+              Log In
+            </a>
           </div>
         </section>
       </div>
@@ -75,8 +79,5 @@
     <footer class="px-4 py-6 border-t border-zinc-200 text-center text-sm text-zinc-500">
       © 2025 Research Chat. All rights reserved.
     </footer>
-  </body>
-</html>
-    </div>
   </body>
 </html>
