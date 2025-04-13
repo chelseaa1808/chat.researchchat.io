@@ -3,20 +3,21 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
- "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "serve": "vite preview"
-},
-
-
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^2.0.18",
+    "@prettier/plugin-python": "^0.0.0-development",
+    "@prettier/plugin-xml": "^3.4.1",
     "@reduxjs/toolkit": "^1.9.5",
     "@sentry/react": "^7.64.0",
     "classnames": "^2.3.2",
     "copy-container-react": "^1.0.11",
+    "prettier": "^3.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.4",
