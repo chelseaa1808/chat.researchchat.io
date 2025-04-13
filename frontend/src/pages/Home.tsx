@@ -1,16 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
 import PathConstants from "@/routes/PathConstants";
-import type { RootState } from "@/store";
+import { useGetCurrentUserQuery } from "@/store/apis/authApi";
 
 const Home: React.FC = () => {
-  const key = useSelector((state: RootState) => state.auth.key);
+  const { data: user, isLoading } = useGetCurrentUserQuery();
 
   return (
     <div className="relative max-w-6xl mx-auto px-6 py-12">
-      {/* Top-right Auth Links — show only if not logged in */}
-      {!key && (
+      {/* Top-right Auth Links — show only if NOT logged in */}
+      {!isLoading && !user && (
         <div className="absolute top-6 right-6 flex gap-4">
           <Link
             to={PathConstants.LOGIN}
@@ -27,7 +26,6 @@ const Home: React.FC = () => {
         </div>
       )}
 
-      {/* Main Heading */}
       <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
         Welcome to ResearchChat
       </h1>
@@ -38,7 +36,6 @@ const Home: React.FC = () => {
         Whether you're conducting behavior studies, prototyping new interfaces, or analyzing user interactions, ResearchChat provides the tools to build, deploy, and review AI-driven dialogues.
       </p>
 
-      {/* Main CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 mb-8">
         <Link
           to={PathConstants.BOT_PAGE}

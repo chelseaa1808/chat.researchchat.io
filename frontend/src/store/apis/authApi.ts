@@ -54,6 +54,13 @@ export const authApi = createApi({
         method: "GET",
       }),
     }),
+    getCurrentUser: builder.query({
+      providesTags: ["User"],
+      query: () => ({
+        url: "/users/me/",
+        method: "GET",
+      }),
+    }),
     register: builder.mutation({
         invalidatesTags: ["User"],
         query: (credentials) => ({
@@ -81,4 +88,5 @@ export const {
   useGetUserQuery,
   useLogoutMutation,
   useRegisterMutation, 
+  useGetCurrentUserQuery,
 } = authApi;

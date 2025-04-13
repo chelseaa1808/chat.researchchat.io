@@ -1,0 +1,89 @@
+/* These styles are generated from project.scss. */
+
+body {
+    background-color: #EEEEEE ;
+  }
+  
+  .container h1 {
+    text-align: center;
+  }
+  
+  .alert-debug {
+    color: black;
+    background-color: white;
+    border-color: #d6e9c6;
+  }
+  
+  .alert-error {
+    color: #b94a48;
+    background-color: #f2dede;
+    border-color: #eed3d7;
+  }
+  
+  ul.messages {
+    list-style-type: none;
+  }
+  
+  .message {
+    margin: 10px 10px;
+    position: relative;
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 5px;
+  }
+  
+  .bot-message {
+    color: #0033B3;
+    margin-right: 50px;
+    background-color: #98dbcc;
+  }
+  
+  .user-message {
+    color: darkgreen;
+    background-color: lightgreen;
+    text-align: right;
+    margin-left: 50px;
+    right: 10px;
+    float: right;
+  }
+  
+  .chat-box {
+    width: 100%;
+    max-width: 400px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    
+
+  }
+  
+  .message-list {
+    height: 400px;
+    overflow: auto;
+    position: relative;
+  }
+  
+  .send-message-form {
+    position: relative;
+  }
+  
+  .send-message-form input {
+    width: 100%;
+    border: none;
+    padding: 10px;
+  }
+  
+  .send-message-form button {
+    position: absolute;
+    right: 7px;
+    bottom: 7px;
+    padding: 3px;
+    border: none;
+    background-color: #0033B3;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,23 @@
+Django>=4.2,<5.0
+djangorestframework>=3.14
+dj-rest-auth>=4.0.1
+django-allauth>=0.54.0
+psycopg2-binary>=2.9
+django-cors-headers>=4.0
+environ
+gunicorn
+whitenoise
+sentry-sdk[django]>=1.5.0
+Pillow
+python-dotenv
+
+# Optional: useful dev tools
+ipython
+django-extensions
+python-dotenv==1.1.0
+django-environ==0.12.0
+djangorestframework==3.16.0
+dj-rest-auth
+django-cors-headers
+psycopg
+django-csp
