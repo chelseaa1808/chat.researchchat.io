@@ -1,4 +1,3 @@
-// vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -11,7 +10,7 @@ export default defineConfig(({ command }) => ({
     manifest: true,
     rollupOptions: {
       output: {
-        manualChunks: undefined,
+        manualChunks: undefined, // Optional — disables chunk splitting
       },
     },
   },
