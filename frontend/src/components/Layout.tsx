@@ -1,4 +1,4 @@
-import React, { Suspense, Fragment } from "react";
+import React, { Suspense } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -48,6 +48,21 @@ const Layout: React.FC = () => {
                           {item.name}
                         </Link>
                       ))}
+
+                      {/* Admin Dashboard visible only for staff */}
+                      {!isLoading && user?.is_staff && (
+                        <Link
+                          to={PathConstants.ADMIN_DASHBOARD}
+                          className={classNames(
+                            isCurrent(PathConstants.ADMIN_DASHBOARD)
+                              ? "bg-gray-900 text-white"
+                              : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                            "rounded-md px-3 py-2 text-sm font-medium"
+                          )}
+                        >
+                          Admin
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -122,6 +137,21 @@ const Layout: React.FC = () => {
                     {item.name}
                   </Disclosure.Button>
                 ))}
+
+                {!isLoading && user?.is_staff && (
+                  <Disclosure.Button
+                    as={Link}
+                    to={PathConstants.ADMIN_DASHBOARD}
+                    className={classNames(
+                      isCurrent(PathConstants.ADMIN_DASHBOARD)
+                        ? "bg-gray-900 text-white"
+                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      "block rounded-md px-3 py-2 text-base font-medium"
+                    )}
+                  >
+                    Admin
+                  </Disclosure.Button>
+                )}
               </div>
             </Disclosure.Panel>
           </>

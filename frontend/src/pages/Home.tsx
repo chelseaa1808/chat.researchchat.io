@@ -8,6 +8,23 @@ const Home: React.FC = () => {
 
   return (
     <div className="relative max-w-6xl mx-auto px-6 py-12">
+      {/* Top-right Auth Links — show only if NOT logged in */}
+      {!isLoading && !user && (
+        <div className="absolute top-6 right-6 flex gap-4">
+          <Link
+            to={PathConstants.LOGIN}
+            className="text-sm font-medium text-gray-600 dark:text-gray-200 hover:underline"
+          >
+            Log In
+          </Link>
+          <Link
+            to={PathConstants.REGISTER}
+            className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            Register
+          </Link>
+        </div>
+      )}
 
       <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
         Welcome to ResearchChat
@@ -38,3 +55,5 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+
