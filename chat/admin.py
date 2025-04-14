@@ -31,7 +31,7 @@ class ConversationAdmin(admin.ModelAdmin):
     list_filter = ("chat_page__bot__model",)
     ordering = ("-modified",)
 
-  def export_links(self, obj):
+    def export_links(self, obj):
         return format_html(
             '<a class="button" href="/api/export/conversations/csv/" target="_blank">Export CSV</a>&nbsp;'
             '<a class="button" href="/api/export/conversations/xml/" target="_blank">Export XML</a>'
