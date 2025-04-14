@@ -4,13 +4,20 @@ import path from "path";
 
 export default defineConfig({
   base: "/chat.researchchat.io/", // ✅ Important
+  publicDir: "public",
+  build: {
+    outDir: "dist",
+    manifest: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
   plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
     },
-  },
-  build: {
-    manifest: true,
   },
 });
