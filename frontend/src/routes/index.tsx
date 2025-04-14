@@ -11,6 +11,7 @@ const ChatHistoryPage = React.lazy(() => import("../pages/ChatHistoryPage"));
 const Login = React.lazy(() => import("../pages/UserLoginPage"));
 const Register = React.lazy(() => import("../pages/UserRegisterPage"));
 const UserProfile = React.lazy(() => import("../pages/UserProfilePage"));
+const AdminDashboard = React.lazy(() => import("../pages/AdminDashboardPage"));
 
 // Optional: define route shape
 interface Route {
@@ -29,7 +30,8 @@ const routes: Route[] = [
   { path: PathConstants.CHAT_HISTORY, element: <ChatHistoryPage /> },
   { path: PathConstants.LOGIN, element: <Login /> },
   { path: PathConstants.REGISTER, element: <Register /> },
-  { path: PathConstants.PROFILE, element: <UserProfile /> }, // ✅ Fix key
+  { path: PathConstants.PROFILE, element: <UserProfile /> }, // Fix key
+  { path: PathConstants.ADMIN_DASHBOARD, element: <AdminDashboard /> },
 ];
 
 export default routes;

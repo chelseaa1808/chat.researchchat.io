@@ -14,6 +14,8 @@ urlpatterns = [
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
     path("csrf/", views.csrf, name="csrf"),
     path("bots/", views.BotListAPIView.as_view(), name="bots"),
+    path("export/conversations/csv/", views.export_conversations_csv, name="export_csv"),
+    path("export/conversations/xml/", views.export_conversations_xml, name="export_xml"),
     path("bots/<slug:slug>", views.ConversationAPIView.as_view(), name="conversation_detail"),
     path("send_message/", views.send_chat_message, name="send_message"),
     path(
