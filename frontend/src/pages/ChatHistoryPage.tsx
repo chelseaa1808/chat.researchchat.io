@@ -24,7 +24,8 @@ const ChatHistoryPage: React.FC = () => {
         <ChatHistory uuid={uuid} />
       </div>
     </div>
-
+  );
+};
   
 
 export default ChatHistoryPage;

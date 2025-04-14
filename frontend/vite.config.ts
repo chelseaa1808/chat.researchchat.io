@@ -2,11 +2,12 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-// https://vitejs.dev/config/
-export default defineConfig(({ command }) => ({
-  base: command === "build" ? "/static/" : "/",
+// Set base to '/' for custom domain deployments (e.g., researchchat.io)
+export default defineConfig({
+  base: "/",
   build: {
     manifest: true,
+    outDir: "dist",
   },
   plugins: [react()],
   resolve: {
@@ -14,4 +15,4 @@ export default defineConfig(({ command }) => ({
       "@": path.resolve(__dirname, "src"),
     },
   },
-}));
+});
