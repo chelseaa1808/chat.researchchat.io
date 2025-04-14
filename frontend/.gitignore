@@ -7,15 +7,25 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Node modules and caches
+node_modules/
+.cache/
+frontend/node_modules/
 frontend/node_modules/.cache/
-# dist/
-!frontend/dist/
+
+# Build output
+frontend/dist/
+
+# Local env files
 *.local
 
-# Editor directories and files
-.vscode/*
+# GitHub Pages artifacts (optional cleanup)
+gh-pages-cache/
+
+# Editor directories and OS files
+.vscode/
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
