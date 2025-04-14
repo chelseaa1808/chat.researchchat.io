@@ -40,7 +40,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, 'researchchat.env'))
 SECRET_KEY = env("DJANGO_SECRET")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 # FRONTEND_URL = env("FRONTEND_URL")
 
 #updating webpage name
@@ -75,6 +75,7 @@ SITE_ID = 1
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware"
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -129,7 +130,7 @@ DATABASES = {
         default=env("DATABASE_URL"),
         conn_max_age=600,
         conn_health_checks=True,
-        ssl_require=False  # Set to True in production
+        ssl_require=True  # Set to True in production
     )
 }
 DATABASE_URL = env('DATABASE_URL')
@@ -181,12 +182,14 @@ VITE_APP_DIR = os.path.join(BASE_DIR, "frontend")
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__name__))
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 
 if os.path.exists(BASE_DIR / 'frontend/dist'):
     STATICFILES_DIRS = [BASE_DIR / 'frontend/dist']
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, "static/")
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
