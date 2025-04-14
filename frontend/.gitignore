@@ -8,10 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 frontend/node_modules/.cache/
-node_modules
-.cache
-dist
-dist-ssr
+# dist/
+!frontend/dist/
 *.local
 
 # Editor directories and files

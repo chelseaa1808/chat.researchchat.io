@@ -2,14 +2,14 @@
   "name": "chattr_frontend",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://chelseaa1808.github.io/chat.researchchat.io",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages --dist dist --dotfiles"
-
+    "deploy": "gh-pages -d dist"
 
   },
   "dependencies": {
