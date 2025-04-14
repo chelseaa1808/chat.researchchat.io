@@ -40,7 +40,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, 'researchchat.env'))
 SECRET_KEY = env("DJANGO_SECRET")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+
 # FRONTEND_URL = env("FRONTEND_URL")
 
 #updating webpage name
@@ -231,7 +231,7 @@ ACCOUNT_EMAIL_VERIFICATION = "optional"  # use "mandatory" if using email confir
 
 
 # Optional: dev email preview
-EMAIL_BACKEND = env("EMAIL_BACKEND")
+EMAIL_BACKEND = env("EMAIL_BACKEND", default="django.core.mail.backends.console.EmailBackend")
 EMAIL_HOST = env("EMAIL_HOST")
 EMAIL_PORT = env.int("EMAIL_PORT")
 EMAIL_HOST_USER = env("EMAIL_HOST_USER")
