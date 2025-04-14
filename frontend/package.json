@@ -9,7 +9,8 @@
     "build": "vite build",
     "serve": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --remove"
+    "deploy": "gh-pages -d dist --no-clean"
+
 
   },
   "dependencies": {
