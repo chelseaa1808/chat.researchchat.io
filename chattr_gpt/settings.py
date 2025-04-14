@@ -44,7 +44,7 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 # FRONTEND_URL = env("FRONTEND_URL")
 
 #updating webpage name
-ALLOWED_HOSTS = ["chat.researchchat.io", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["chat.researchchat.io", "chat-researchchat-io.onrender.com", "researchchat.io", "localhost", "127.0.0.1"]
 INTERNAL_IPS = ["127.0.0.1", "localhost"]
 
 
@@ -88,6 +88,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://chat.researchchat.io",     # Production frontend
+    "https://chat-researchchat-io.onrender.com",
     "http://localhost:5173",            # Local dev (Vite)
     "http://127.0.0.1:5173",            # Local dev alternative
 ]
@@ -244,6 +245,7 @@ origins_list = [
     "http://localhost:8000",
     "http://127.0.0.1:5173",
     "https://chat.researchchat.io",
+    "https://chat-researchchat-io.onrender.com",
 ]
 
 CORS_ALLOWED_ORIGINS = origins_list
