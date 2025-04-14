@@ -1,18 +1,13 @@
+// vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig(({ command }) => ({
-  base: command === "build" ? "/chat.researchchat.io/" : "/",
-  publicDir: "public",
+  base: command === "build" ? "/" : "/", // ✅ Since you're using a custom domain!
   build: {
-    outDir: "dist",
     manifest: true,
-    rollupOptions: {
-      output: {
-        manualChunks: undefined, // Optional — disables chunk splitting
-      },
-    },
+    outDir: "dist",
   },
   plugins: [react()],
   resolve: {
