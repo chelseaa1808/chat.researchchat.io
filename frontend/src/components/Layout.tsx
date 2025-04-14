@@ -66,45 +66,37 @@ const Layout: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 <div className="hidden md:flex items-center space-x-4">
-                  {!isLoading && (
-                    user ? (
-                      <>
-                        <span className="text-white text-sm">
-                          Hello, {user.username}
-                        </span>
-                        <Link
-                          to={PathConstants.PROFILE}
-                          className="text-white hover:underline"
-                        >
-                          Profile
-                        </Link>
-                        <button
-                          onClick={handleLogout}
-                          className="px-4 py-2 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700"
-                        >
-                          Logout
-                        </button>
-                      </>
-                    ) : (
-                      <>
-                        <Link
-                          to={PathConstants.LOGIN}
-                          className="text-white hover:underline"
-                        >
-                          Login
-                        </Link>
-                        <Link
-                          to={PathConstants.REGISTER}
-                          className="text-white hover:underline"
-                        >
-                          Register
-                        </Link>
-                      </>
-                    )
-                  )}
-                </div>
+                  {!isLoading && user ? (
+                    <>
+                      <span className="text-white text-sm">Hello, {user.username}</span>
+                      <Link to={PathConstants.PROFILE} className="text-white hover:underline">
+                        Profile
+                      </Link>
+                      <button
+                        onClick={handleLogout}
+                        className="px-4 py-2 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700"
+                      >
+                        Logout
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                     <Link
+                       to={PathConstants.LOGIN}
+                       className="text-sm text-white hover:underline"
+                     >
+                       Log In
+                     </Link>
+                     <Link
+                       to={PathConstants.REGISTER}
+                       className="text-sm text-blue-300 hover:underline"
+                     >
+                       Register
+                     </Link>
+                  </>
+                )}
+              </div>
 
                 <div className="flex md:hidden">
                   <Disclosure.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-800 rounded-md hover:bg-gray-700 hover:text-white">
@@ -170,3 +162,4 @@ const Layout: React.FC = () => {
 };
 
 export default Layout;
+

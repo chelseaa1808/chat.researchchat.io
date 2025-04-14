@@ -10,7 +10,7 @@ const Home: React.FC = () => {
     <div className="relative max-w-6xl mx-auto px-6 py-12">
       {/* Top-right Auth Links — show only if NOT logged in */}
       {!isLoading && !user && (
-        <div className="absolute top-6 right-6 flex gap-4">
+        <div className="absolute top-6 right-6 z-50 flex gap-4">
           <Link
             to={PathConstants.LOGIN}
             className="text-sm font-medium text-gray-600 dark:text-gray-200 hover:underline"
@@ -23,8 +23,8 @@ const Home: React.FC = () => {
           >
             Register
           </Link>
-        </div>
-      )}
+    </div>
+)}
 
       <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
         Welcome to ResearchChat
