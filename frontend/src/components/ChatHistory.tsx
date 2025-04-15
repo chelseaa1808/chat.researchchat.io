@@ -85,15 +85,15 @@ const ChatHistory = ({ slug, uuid }: ChatHistoryProps) => {
         <span className="absolute w-3 h-3 bg-green-600 rounded-full left-10 top-3"></span>
       </div>
 
-      {/* Admin Dashboard Link */}
+     {/* Admin Dashboard Link *
       <div className="px-4 py-2 text-right bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
         <Link
           to={PathConstants.ADMIN_DASHBOARD}
           className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
         >
           ➤ View Admin Dashboard
-        </Link>
-      </div>
+        </Link>*/}
+      </div>*/}
 
       {/* Messages list */}
       <div className="space-y-4 relative w-full p-6 overflow-y-auto scroll-smooth h-[30rem]">

@@ -17,10 +17,10 @@ const Home: React.FC = () => {
 
       <div className="flex flex-col sm:flex-row gap-4 mb-8">
         <Link
-          to={PathConstants.BOT_PAGE}
+          to={PathConstants.ADMIN_DASHBOARD}
           className="px-6 py-3 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition"
         >
-          View Bots
+          Admin Dashboard
         </Link>
         <Link
           to={PathConstants.ABOUT}
