@@ -92,7 +92,7 @@ const ChatHistory = ({ slug, uuid }: ChatHistoryProps) => {
           className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
         >
           ➤ View Admin Dashboard
-        </Link>*/}
+        </Link>
       </div>*/}
 
       {/* Messages list */}
