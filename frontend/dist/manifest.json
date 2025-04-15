@@ -1,0 +1,142 @@
+{
+  "_Button-ea3c4d3d.js": {
+    "file": "assets/Button-ea3c4d3d.js",
+    "imports": [
+      "index.html",
+      "_index-643dad99.js"
+    ]
+  },
+  "_ChatHistory-dcacc50e.js": {
+    "file": "assets/ChatHistory-dcacc50e.js",
+    "imports": [
+      "index.html",
+      "_index-643dad99.js"
+    ]
+  },
+  "_Table-a188ed52.js": {
+    "file": "assets/Table-a188ed52.js",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "_index-643dad99.js": {
+    "file": "assets/index-643dad99.js",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "index.css": {
+    "file": "assets/index-94bee7c4.css",
+    "src": "index.css"
+  },
+  "index.html": {
+    "css": [
+      "assets/index-94bee7c4.css"
+    ],
+    "dynamicImports": [
+      "src/pages/About.tsx",
+      "src/pages/Home.tsx",
+      "src/pages/ChatPage.tsx",
+      "src/pages/BotPage.tsx",
+      "src/pages/ConversationPage.tsx",
+      "src/pages/ChatHistoryPage.tsx",
+      "src/pages/UserLoginPage.tsx",
+      "src/pages/UserRegisterPage.tsx",
+      "src/pages/UserProfilePage.tsx",
+      "src/pages/AdminDashboardPage.tsx"
+    ],
+    "file": "assets/index-28d0fc1d.js",
+    "isEntry": true,
+    "src": "index.html"
+  },
+  "src/pages/About.tsx": {
+    "file": "assets/About-c96ed0c5.js",
+    "imports": [
+      "index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/pages/About.tsx"
+  },
+  "src/pages/AdminDashboardPage.tsx": {
+    "file": "assets/AdminDashboardPage-141710f1.js",
+    "imports": [
+      "index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/pages/AdminDashboardPage.tsx"
+  },
+  "src/pages/BotPage.tsx": {
+    "file": "assets/BotPage-bd0a33a7.js",
+    "imports": [
+      "index.html",
+      "_Table-a188ed52.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/pages/BotPage.tsx"
+  },
+  "src/pages/ChatHistoryPage.tsx": {
+    "file": "assets/ChatHistoryPage-97438e35.js",
+    "imports": [
+      "index.html",
+      "_ChatHistory-dcacc50e.js",
+      "_index-643dad99.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/pages/ChatHistoryPage.tsx"
+  },
+  "src/pages/ChatPage.tsx": {
+    "file": "assets/ChatPage-8f800399.js",
+    "imports": [
+      "index.html",
+      "_ChatHistory-dcacc50e.js",
+      "_index-643dad99.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/pages/ChatPage.tsx"
+  },
+  "src/pages/ConversationPage.tsx": {
+    "file": "assets/ConversationPage-3db5201a.js",
+    "imports": [
+      "index.html",
+      "_Table-a188ed52.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/pages/ConversationPage.tsx"
+  },
+  "src/pages/Home.tsx": {
+    "file": "assets/Home-236b910d.js",
+    "imports": [
+      "index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/pages/Home.tsx"
+  },
+  "src/pages/UserLoginPage.tsx": {
+    "file": "assets/UserLoginPage-e57790ab.js",
+    "imports": [
+      "index.html",
+      "_Button-ea3c4d3d.js",
+      "_index-643dad99.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/pages/UserLoginPage.tsx"
+  },
+  "src/pages/UserProfilePage.tsx": {
+    "file": "assets/UserProfilePage-a926ffb3.js",
+    "imports": [
+      "index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/pages/UserProfilePage.tsx"
+  },
+  "src/pages/UserRegisterPage.tsx": {
+    "file": "assets/UserRegisterPage-51ccd592.js",
+    "imports": [
+      "index.html",
+      "_Button-ea3c4d3d.js",
+      "_index-643dad99.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/pages/UserRegisterPage.tsx"
+  }
+}
