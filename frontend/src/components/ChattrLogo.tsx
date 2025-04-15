@@ -15,7 +15,7 @@ export default function ResearchChatLogo({
 }: ResearchChatLogoProps) {
   return (
     <img
-      src="/src/assets/researchchat-logo.svg" // adjust if using alias path like "@/assets"
+      src="/src/public/ResearchChatLogo.jpg" // adjust if using alias path like "@/assets"
       alt={title}
       className={className}
       width={width}
