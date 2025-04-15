@@ -1,5 +1,7 @@
 import React from "react";
 import PathConstants from "./PathConstants";
+import RequireAuth from "@/components/RequireAuth";
+import ChatPage from "@/pages/ChatPage";
 
 // Lazy-load pages
 const About = React.lazy(() => import("../pages/About"));
@@ -17,6 +19,14 @@ const AdminDashboard = React.lazy(() => import("../pages/AdminDashboardPage"));
 interface Route {
   path: string;
   element: JSX.Element;
+}
+{
+  path: "/chat",
+  element: (
+    <RequireAuth>
+      <ChatPage />
+    </RequireAuth>
+  ),
 }
 
 const routes: Route[] = [

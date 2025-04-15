@@ -1,8 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useLoginMutation } from "../store";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom"; // Link is imported
 import Button from "../components/Button";
+import PathConstants from "@/routes/PathConstants"; 
 
 interface LoginFormInputs {
   username: string;
@@ -67,6 +68,15 @@ const UserLoginPage: React.FC = () => {
             {result.isLoading ? "Logging in..." : "Login"}
           </Button>
         </div>
+        <p className="mt-4 text-sm text-center text-gray-600 dark:text-gray-300">
+          Don’t have an account?{" "}
+          <Link
+            to={PathConstants.REGISTER}
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            Register here
+          </Link>
+        </p>
 
         {result.isError && (
           <p className="text-sm text-red-500">

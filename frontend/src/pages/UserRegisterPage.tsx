@@ -1,8 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useRegisterMutation } from "../store";
-import { useNavigate } from "react-router-dom";
+import { useLoginMutation } from "../store";
+import { useNavigate, Link } from "react-router-dom"; // Link is imported
 import Button from "../components/Button";
+import PathConstants from "@/routes/PathConstants"; 
 
 interface RegisterFormInputs {
   username: string;
@@ -108,6 +109,15 @@ const UserRegisterPage: React.FC = () => {
             {result.isLoading ? "Registering..." : "Register"}
           </Button>
         </div>
+        <p className="mt-4 text-sm text-center text-gray-600 dark:text-gray-300">
+          Already have an account?{" "}
+          <Link
+            to={PathConstants.LOGIN}
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            Login here
+          </Link>
+        </p>
 
         {result.isError && (
           <p className="text-sm text-red-500">
