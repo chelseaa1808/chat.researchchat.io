@@ -15,7 +15,7 @@ export default function ResearchChatLogo({
 }: ResearchChatLogoProps) {
   return (
     <img
-      src="/ResearchChatLogo.png"
+      src="/ChatLogo.png"
       alt={title}
       title={title}
       className={className}
