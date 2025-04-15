@@ -1,7 +1,7 @@
 import React from "react";
 import PathConstants from "./PathConstants";
 import RequireAuth from "@/components/RequireAuth";
-import ChatPage from "@/pages/ChatPage";
+import ChatHistory from "@/components/ChatHistory";
 
 // Lazy-load pages
 const About = React.lazy(() => import("../pages/About"));
@@ -39,7 +39,7 @@ const routes: Route[] = [
     path: "/chat",
     element: (
       <RequireAuth>
-        <ChatPage />
+        <ChatHistory />
       </RequireAuth>
     ),
   }
