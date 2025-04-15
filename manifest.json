@@ -1,26 +1,26 @@
 {
-  "_Button-e024bb77.js": {
-    "file": "assets/Button-e024bb77.js",
+  "_Button-8bd74a55.js": {
+    "file": "assets/Button-8bd74a55.js",
     "imports": [
       "index.html",
-      "_index-f8bbf919.js"
+      "_index-861c8b4a.js"
     ]
   },
-  "_ChatHistory-306c99d8.js": {
-    "file": "assets/ChatHistory-306c99d8.js",
+  "_ChatHistory-6c012f91.js": {
+    "file": "assets/ChatHistory-6c012f91.js",
     "imports": [
       "index.html",
-      "_index-f8bbf919.js"
+      "_index-861c8b4a.js"
     ]
   },
-  "_Table-8db88dba.js": {
-    "file": "assets/Table-8db88dba.js",
+  "_Table-5c66287a.js": {
+    "file": "assets/Table-5c66287a.js",
     "imports": [
       "index.html"
     ]
   },
-  "_index-f8bbf919.js": {
-    "file": "assets/index-f8bbf919.js",
+  "_index-861c8b4a.js": {
+    "file": "assets/index-861c8b4a.js",
     "imports": [
       "index.html"
     ]
@@ -45,12 +45,12 @@
       "src/pages/UserProfilePage.tsx",
       "src/pages/AdminDashboardPage.tsx"
     ],
-    "file": "assets/index-d3cf5b57.js",
+    "file": "assets/index-95d25a81.js",
     "isEntry": true,
     "src": "index.html"
   },
   "src/pages/About.tsx": {
-    "file": "assets/About-cdadd2c9.js",
+    "file": "assets/About-4a857606.js",
     "imports": [
       "index.html"
     ],
@@ -58,7 +58,7 @@
     "src": "src/pages/About.tsx"
   },
   "src/pages/AdminDashboardPage.tsx": {
-    "file": "assets/AdminDashboardPage-6a11cd3a.js",
+    "file": "assets/AdminDashboardPage-4f236c0b.js",
     "imports": [
       "index.html"
     ],
@@ -66,45 +66,45 @@
     "src": "src/pages/AdminDashboardPage.tsx"
   },
   "src/pages/BotPage.tsx": {
-    "file": "assets/BotPage-156d6e64.js",
+    "file": "assets/BotPage-2b7ffe19.js",
     "imports": [
       "index.html",
-      "_Table-8db88dba.js"
+      "_Table-5c66287a.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/BotPage.tsx"
   },
   "src/pages/ChatHistoryPage.tsx": {
-    "file": "assets/ChatHistoryPage-575712f6.js",
+    "file": "assets/ChatHistoryPage-da40ff23.js",
     "imports": [
       "index.html",
-      "_ChatHistory-306c99d8.js",
-      "_index-f8bbf919.js"
+      "_ChatHistory-6c012f91.js",
+      "_index-861c8b4a.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/ChatHistoryPage.tsx"
   },
   "src/pages/ChatPage.tsx": {
-    "file": "assets/ChatPage-85755cf9.js",
+    "file": "assets/ChatPage-4b1953b1.js",
     "imports": [
       "index.html",
-      "_ChatHistory-306c99d8.js",
-      "_index-f8bbf919.js"
+      "_ChatHistory-6c012f91.js",
+      "_index-861c8b4a.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/ChatPage.tsx"
   },
   "src/pages/ConversationPage.tsx": {
-    "file": "assets/ConversationPage-868f9520.js",
+    "file": "assets/ConversationPage-359b17ab.js",
     "imports": [
       "index.html",
-      "_Table-8db88dba.js"
+      "_Table-5c66287a.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/ConversationPage.tsx"
   },
   "src/pages/Home.tsx": {
-    "file": "assets/Home-eb78ef9b.js",
+    "file": "assets/Home-f5a29c7f.js",
     "imports": [
       "index.html"
     ],
@@ -112,17 +112,17 @@
     "src": "src/pages/Home.tsx"
   },
   "src/pages/UserLoginPage.tsx": {
-    "file": "assets/UserLoginPage-da0a2e2c.js",
+    "file": "assets/UserLoginPage-0c6c5f50.js",
     "imports": [
       "index.html",
-      "_Button-e024bb77.js",
-      "_index-f8bbf919.js"
+      "_Button-8bd74a55.js",
+      "_index-861c8b4a.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/UserLoginPage.tsx"
   },
   "src/pages/UserProfilePage.tsx": {
-    "file": "assets/UserProfilePage-e458b4b5.js",
+    "file": "assets/UserProfilePage-309dd459.js",
     "imports": [
       "index.html"
     ],
@@ -130,11 +130,11 @@
     "src": "src/pages/UserProfilePage.tsx"
   },
   "src/pages/UserRegisterPage.tsx": {
-    "file": "assets/UserRegisterPage-c9faeb4c.js",
+    "file": "assets/UserRegisterPage-4920d3ab.js",
     "imports": [
       "index.html",
-      "_Button-e024bb77.js",
-      "_index-f8bbf919.js"
+      "_Button-8bd74a55.js",
+      "_index-861c8b4a.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/UserRegisterPage.tsx"
