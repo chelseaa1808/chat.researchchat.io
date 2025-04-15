@@ -1,37 +1,37 @@
 {
-  "_Button-138f1e68.js": {
-    "file": "assets/Button-138f1e68.js",
+  "_Button-96317845.js": {
+    "file": "assets/Button-96317845.js",
     "imports": [
       "index.html",
-      "_index-97137444.js"
+      "_index-5509adbc.js"
     ]
   },
-  "_ChatHistory-db6017a9.js": {
-    "file": "assets/ChatHistory-db6017a9.js",
+  "_ChatHistory-c9b91bef.js": {
+    "file": "assets/ChatHistory-c9b91bef.js",
     "imports": [
       "index.html",
-      "_index-97137444.js"
+      "_index-5509adbc.js"
     ]
   },
-  "_Table-fceb1ee1.js": {
-    "file": "assets/Table-fceb1ee1.js",
+  "_Table-50f34d2c.js": {
+    "file": "assets/Table-50f34d2c.js",
     "imports": [
       "index.html"
     ]
   },
-  "_index-97137444.js": {
-    "file": "assets/index-97137444.js",
+  "_index-5509adbc.js": {
+    "file": "assets/index-5509adbc.js",
     "imports": [
       "index.html"
     ]
   },
   "index.css": {
-    "file": "assets/index-260697b0.css",
+    "file": "assets/index-6156a17c.css",
     "src": "index.css"
   },
   "index.html": {
     "css": [
-      "assets/index-260697b0.css"
+      "assets/index-6156a17c.css"
     ],
     "dynamicImports": [
       "src/pages/About.tsx",
@@ -45,12 +45,12 @@
       "src/pages/UserProfilePage.tsx",
       "src/pages/AdminDashboardPage.tsx"
     ],
-    "file": "assets/index-24d05a5d.js",
+    "file": "assets/index-2050d34e.js",
     "isEntry": true,
     "src": "index.html"
   },
   "src/pages/About.tsx": {
-    "file": "assets/About-18825741.js",
+    "file": "assets/About-aa47c610.js",
     "imports": [
       "index.html"
     ],
@@ -58,7 +58,7 @@
     "src": "src/pages/About.tsx"
   },
   "src/pages/AdminDashboardPage.tsx": {
-    "file": "assets/AdminDashboardPage-04c5957b.js",
+    "file": "assets/AdminDashboardPage-e557b279.js",
     "imports": [
       "index.html"
     ],
@@ -66,45 +66,45 @@
     "src": "src/pages/AdminDashboardPage.tsx"
   },
   "src/pages/BotPage.tsx": {
-    "file": "assets/BotPage-8b7bfa54.js",
+    "file": "assets/BotPage-a5a2a406.js",
     "imports": [
       "index.html",
-      "_Table-fceb1ee1.js"
+      "_Table-50f34d2c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/BotPage.tsx"
   },
   "src/pages/ChatHistoryPage.tsx": {
-    "file": "assets/ChatHistoryPage-7be73b0a.js",
+    "file": "assets/ChatHistoryPage-d56f6b26.js",
     "imports": [
       "index.html",
-      "_ChatHistory-db6017a9.js",
-      "_index-97137444.js"
+      "_ChatHistory-c9b91bef.js",
+      "_index-5509adbc.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/ChatHistoryPage.tsx"
   },
   "src/pages/ChatPage.tsx": {
-    "file": "assets/ChatPage-2e9d746c.js",
+    "file": "assets/ChatPage-d2989e36.js",
     "imports": [
       "index.html",
-      "_ChatHistory-db6017a9.js",
-      "_index-97137444.js"
+      "_ChatHistory-c9b91bef.js",
+      "_index-5509adbc.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/ChatPage.tsx"
   },
   "src/pages/ConversationPage.tsx": {
-    "file": "assets/ConversationPage-ce7609ce.js",
+    "file": "assets/ConversationPage-ceb63cec.js",
     "imports": [
       "index.html",
-      "_Table-fceb1ee1.js"
+      "_Table-50f34d2c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/ConversationPage.tsx"
   },
   "src/pages/Home.tsx": {
-    "file": "assets/Home-21bf73ae.js",
+    "file": "assets/Home-6deed0e8.js",
     "imports": [
       "index.html"
     ],
@@ -112,17 +112,17 @@
     "src": "src/pages/Home.tsx"
   },
   "src/pages/UserLoginPage.tsx": {
-    "file": "assets/UserLoginPage-90d6c04d.js",
+    "file": "assets/UserLoginPage-0ca06598.js",
     "imports": [
       "index.html",
-      "_Button-138f1e68.js",
-      "_index-97137444.js"
+      "_Button-96317845.js",
+      "_index-5509adbc.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/UserLoginPage.tsx"
   },
   "src/pages/UserProfilePage.tsx": {
-    "file": "assets/UserProfilePage-be89eb73.js",
+    "file": "assets/UserProfilePage-b71dab41.js",
     "imports": [
       "index.html"
     ],
@@ -130,11 +130,11 @@
     "src": "src/pages/UserProfilePage.tsx"
   },
   "src/pages/UserRegisterPage.tsx": {
-    "file": "assets/UserRegisterPage-1b99c3e0.js",
+    "file": "assets/UserRegisterPage-03ddd806.js",
     "imports": [
       "index.html",
-      "_Button-138f1e68.js",
-      "_index-97137444.js"
+      "_Button-96317845.js",
+      "_index-5509adbc.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/UserRegisterPage.tsx"
