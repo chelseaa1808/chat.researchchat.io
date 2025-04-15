@@ -15,11 +15,15 @@ export default function ResearchChatLogo({
 }: ResearchChatLogoProps) {
   return (
     <img
-      src="/src/public/ResearchChatLogo.jpg" // adjust if using alias path like "@/assets"
+      src="/ResearchChatLogo.png"
       alt={title}
+      title={title}
       className={className}
       width={width}
       height={height}
+      loading="lazy"
+      decoding="async"
     />
+
   );
 }
