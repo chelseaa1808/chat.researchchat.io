@@ -22,30 +22,6 @@ const routes = [
   { path: PathConstants.REGISTER, element: <Register /> },
 
   // Protected routes wrapped in RequireAuth --Temporarily disabled chat page security
- {/*} {
-    path: PathConstants.BASE_CHAT,
-    element: (
-      <RequireAuth>
-        <ChatPage />
-      </RequireAuth>
-    ),
-  },
-  {
-    path: PathConstants.NEW_CHAT,
-    element: (
-      <RequireAuth>
-        <ChatPage />
-      </RequireAuth>
-    ),
-  },
-  {
-    path: PathConstants.CHAT_PAGE,
-    element: (
-      <RequireAuth>
-        <ChatPage />
-      </RequireAuth>
-    ),
-  }, */}
   {
     path: PathConstants.BOT_PAGE,
     element: (
@@ -86,7 +62,31 @@ const routes = [
       </RequireAuth>
     ),
   },
-  { path: "*", element: <Navigate to={PathConstants.HOME} /> },
+  { path: "*", element: <Navigate to={PathConstants.HOME} /> },  {/*{
+    path: PathConstants.BASE_CHAT,
+    element: (
+      <RequireAuth>
+        <ChatPage />
+      </RequireAuth>
+    ),
+  },
+  {
+    path: PathConstants.NEW_CHAT,
+    element: (
+      <RequireAuth>
+        <ChatPage />
+      </RequireAuth>
+    ),
+  },
+  {
+    path: PathConstants.CHAT_PAGE,
+    element: (
+      <RequireAuth>
+        <ChatPage />
+      </RequireAuth>
+    ),
+  }, */}
+  
 ];
 
 export default routes;
