@@ -20,14 +20,7 @@ interface Route {
   path: string;
   element: JSX.Element;
 }
-{
-  path: "/chat",
-  element: (
-    <RequireAuth>
-      <ChatPage />
-    </RequireAuth>
-  ),
-}
+
 
 const routes: Route[] = [
   { path: PathConstants.ABOUT, element: <About /> },
@@ -42,6 +35,14 @@ const routes: Route[] = [
   { path: PathConstants.REGISTER, element: <Register /> },
   { path: PathConstants.PROFILE, element: <UserProfile /> }, // Fix key
   { path: PathConstants.ADMIN_DASHBOARD, element: <AdminDashboard /> },
+  {
+    path: "/chat",
+    element: (
+      <RequireAuth>
+        <ChatPage />
+      </RequireAuth>
+    ),
+  }
 ];
 
 export default routes;
