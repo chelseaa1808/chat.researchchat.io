@@ -15,13 +15,22 @@ const Register = React.lazy(() => import("../pages/UserRegisterPage"));
 const UserProfile = React.lazy(() => import("../pages/UserProfilePage"));
 const AdminDashboard = React.lazy(() => import("../pages/AdminDashboardPage"));
 
+// Admin Panel Subroutes (if not protected, wrap manually)
+const adminRoutes = [
+  { path: "/adminpanel", element: <AdminDashboard /> },
+  { path: "/adminpanel/bots", element: <BotPage /> },
+  { path: "/adminpanel/chat-history", element: <ChatHistoryPage /> },
+  { path: "/adminpanel/chats", element: <ChatPage /> },
+  { path: "/adminpanel/conversations", element: <ConversationPage /> },
+];
+
 const routes = [
   { path: PathConstants.ABOUT, element: <About /> },
   { path: PathConstants.HOME, element: <Home /> },
   { path: PathConstants.LOGIN, element: <Login /> },
   { path: PathConstants.REGISTER, element: <Register /> },
 
-  // Protected routes wrapped in RequireAuth --Temporarily disabled chat page security
+  // Optionally protect pages
   {
     path: PathConstants.BOT_PAGE,
     element: (
@@ -62,31 +71,26 @@ const routes = [
       </RequireAuth>
     ),
   },
-  { path: "*", element: <Navigate to={PathConstants.HOME} /> },  {/*{
+
+  // Chat routes (currently not protected)
+  {
     path: PathConstants.BASE_CHAT,
-    element: (
-      <RequireAuth>
-        <ChatPage />
-      </RequireAuth>
-    ),
+    element: <ChatPage />,
   },
   {
     path: PathConstants.NEW_CHAT,
-    element: (
-      <RequireAuth>
-        <ChatPage />
-      </RequireAuth>
-    ),
+    element: <ChatPage />,
   },
   {
     path: PathConstants.CHAT_PAGE,
-    element: (
-      <RequireAuth>
-        <ChatPage />
-      </RequireAuth>
-    ),
-  }, */}
-  
+    element: <ChatPage />,
+  },
+
+  // Admin subroutes added here (not protected by default)
+  ...adminRoutes,
+
+  // Fallback route
+  { path: "*", element: <Navigate to={PathConstants.HOME} /> },
 ];
 
 export default routes;
