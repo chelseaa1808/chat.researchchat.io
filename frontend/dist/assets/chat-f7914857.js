@@ -1,0 +1,1 @@
+import{c as o,j as t,R as r}from"./client-642ef077.js";import e from"./ChatPage-a4109e92.js";import"./authApi-e4360032.js";import"./ChatHistory-bf67929f.js";import"./index-a0f7b105.js";import"./XMarkIcon-8647a2bb.js";o.createRoot(document.getElementById("root")).render(t.jsx(r.StrictMode,{children:t.jsx(e,{})}));

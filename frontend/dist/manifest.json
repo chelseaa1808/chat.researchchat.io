@@ -1,37 +1,87 @@
 {
-  "_Button-4c1c69df.js": {
-    "file": "assets/Button-4c1c69df.js",
+  "_Button-763ed5d0.js": {
+    "file": "assets/Button-763ed5d0.js",
     "imports": [
-      "index.html",
-      "_index-85a540d9.js"
+      "_client-642ef077.js",
+      "_index-a0f7b105.js"
     ]
   },
-  "_ChatHistory-cf923454.js": {
-    "file": "assets/ChatHistory-cf923454.js",
+  "_ChatHistory-bf67929f.js": {
+    "file": "assets/ChatHistory-bf67929f.js",
     "imports": [
-      "index.html",
-      "_index-85a540d9.js"
+      "_client-642ef077.js",
+      "_authApi-e4360032.js",
+      "_index-a0f7b105.js",
+      "_XMarkIcon-8647a2bb.js"
     ]
   },
-  "_Table-60019a3f.js": {
-    "file": "assets/Table-60019a3f.js",
+  "_Table-3094a8ba.js": {
+    "file": "assets/Table-3094a8ba.js",
     "imports": [
-      "index.html"
+      "_client-642ef077.js"
     ]
   },
-  "_index-85a540d9.js": {
-    "file": "assets/index-85a540d9.js",
+  "_XMarkIcon-8647a2bb.js": {
+    "file": "assets/XMarkIcon-8647a2bb.js",
     "imports": [
-      "index.html"
+      "_authApi-e4360032.js",
+      "_client-642ef077.js"
     ]
+  },
+  "_authApi-e4360032.js": {
+    "file": "assets/authApi-e4360032.js",
+    "imports": [
+      "_client-642ef077.js"
+    ]
+  },
+  "_client-642ef077.js": {
+    "file": "assets/client-642ef077.js"
+  },
+  "_index-a0f7b105.js": {
+    "file": "assets/index-a0f7b105.js",
+    "imports": [
+      "_client-642ef077.js"
+    ]
+  },
+  "about.html": {
+    "file": "assets/about-26ed161a.js",
+    "imports": [
+      "_client-642ef077.js",
+      "src/pages/About.tsx"
+    ],
+    "isEntry": true,
+    "src": "about.html"
+  },
+  "adminpanel.html": {
+    "file": "assets/adminpanel-74600ec5.js",
+    "imports": [
+      "_client-642ef077.js",
+      "src/pages/AdminDashboardPage.tsx",
+      "_authApi-e4360032.js"
+    ],
+    "isEntry": true,
+    "src": "adminpanel.html"
+  },
+  "chat.html": {
+    "file": "assets/chat-f7914857.js",
+    "imports": [
+      "_client-642ef077.js",
+      "src/pages/ChatPage.tsx",
+      "_authApi-e4360032.js",
+      "_ChatHistory-bf67929f.js",
+      "_index-a0f7b105.js",
+      "_XMarkIcon-8647a2bb.js"
+    ],
+    "isEntry": true,
+    "src": "chat.html"
   },
   "index.css": {
-    "file": "assets/index-790c3148.css",
+    "file": "assets/index-e947418f.css",
     "src": "index.css"
   },
   "index.html": {
     "css": [
-      "assets/index-790c3148.css"
+      "assets/index-e947418f.css"
     ],
     "dynamicImports": [
       "src/pages/About.tsx",
@@ -45,96 +95,118 @@
       "src/pages/UserProfilePage.tsx",
       "src/pages/AdminDashboardPage.tsx"
     ],
-    "file": "assets/index-bedf31dc.js",
+    "file": "assets/main-c3dbf3c0.js",
+    "imports": [
+      "_client-642ef077.js",
+      "_authApi-e4360032.js",
+      "_XMarkIcon-8647a2bb.js"
+    ],
     "isEntry": true,
     "src": "index.html"
   },
   "src/pages/About.tsx": {
-    "file": "assets/About-367879e3.js",
+    "file": "assets/About-04ada017.js",
     "imports": [
-      "index.html"
+      "_client-642ef077.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/About.tsx"
   },
   "src/pages/AdminDashboardPage.tsx": {
-    "file": "assets/AdminDashboardPage-f850a2ba.js",
+    "file": "assets/AdminDashboardPage-dc1b33c2.js",
     "imports": [
-      "index.html"
+      "_client-642ef077.js",
+      "_authApi-e4360032.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/AdminDashboardPage.tsx"
   },
   "src/pages/BotPage.tsx": {
-    "file": "assets/BotPage-d6801049.js",
+    "file": "assets/BotPage-d1eddb99.js",
     "imports": [
-      "index.html",
-      "_Table-60019a3f.js"
+      "_client-642ef077.js",
+      "_authApi-e4360032.js",
+      "_Table-3094a8ba.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/BotPage.tsx"
   },
   "src/pages/ChatHistoryPage.tsx": {
-    "file": "assets/ChatHistoryPage-11d95c18.js",
+    "file": "assets/ChatHistoryPage-6d143eaa.js",
     "imports": [
-      "index.html",
-      "_ChatHistory-cf923454.js",
-      "_index-85a540d9.js"
+      "_client-642ef077.js",
+      "_ChatHistory-bf67929f.js",
+      "_authApi-e4360032.js",
+      "_index-a0f7b105.js",
+      "_XMarkIcon-8647a2bb.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/ChatHistoryPage.tsx"
   },
   "src/pages/ChatPage.tsx": {
-    "file": "assets/ChatPage-f35cdd01.js",
+    "file": "assets/ChatPage-a4109e92.js",
     "imports": [
-      "index.html",
-      "_ChatHistory-cf923454.js",
-      "_index-85a540d9.js"
+      "_client-642ef077.js",
+      "_authApi-e4360032.js",
+      "_ChatHistory-bf67929f.js",
+      "_XMarkIcon-8647a2bb.js",
+      "_index-a0f7b105.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/ChatPage.tsx"
   },
   "src/pages/ConversationPage.tsx": {
-    "file": "assets/ConversationPage-bf4df63a.js",
+    "file": "assets/ConversationPage-87fa9fd5.js",
     "imports": [
-      "index.html",
-      "_Table-60019a3f.js"
+      "_client-642ef077.js",
+      "_authApi-e4360032.js",
+      "_Table-3094a8ba.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/ConversationPage.tsx"
   },
   "src/pages/Home.tsx": {
-    "file": "assets/Home-eb28fa6d.js",
+    "file": "assets/Home-0e1fcd62.js",
     "imports": [
-      "index.html"
+      "_client-642ef077.js",
+      "_authApi-e4360032.js",
+      "index.html",
+      "_XMarkIcon-8647a2bb.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/Home.tsx"
   },
   "src/pages/UserLoginPage.tsx": {
-    "file": "assets/UserLoginPage-e726b17e.js",
+    "file": "assets/UserLoginPage-b5e16efe.js",
     "imports": [
+      "_client-642ef077.js",
+      "_Button-763ed5d0.js",
+      "_XMarkIcon-8647a2bb.js",
+      "_authApi-e4360032.js",
       "index.html",
-      "_Button-4c1c69df.js",
-      "_index-85a540d9.js"
+      "_index-a0f7b105.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/UserLoginPage.tsx"
   },
   "src/pages/UserProfilePage.tsx": {
-    "file": "assets/UserProfilePage-551cc0fb.js",
+    "file": "assets/UserProfilePage-39affd48.js",
     "imports": [
-      "index.html"
+      "_client-642ef077.js",
+      "_authApi-e4360032.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/UserProfilePage.tsx"
   },
   "src/pages/UserRegisterPage.tsx": {
-    "file": "assets/UserRegisterPage-bbf07c86.js",
+    "file": "assets/UserRegisterPage-6711763e.js",
     "imports": [
+      "_client-642ef077.js",
+      "_Button-763ed5d0.js",
+      "_authApi-e4360032.js",
       "index.html",
-      "_Button-4c1c69df.js",
-      "_index-85a540d9.js"
+      "_index-a0f7b105.js",
+      "_XMarkIcon-8647a2bb.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/UserRegisterPage.tsx"

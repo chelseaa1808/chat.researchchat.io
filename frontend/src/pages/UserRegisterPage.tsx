@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useLoginMutation } from "../store";
+import { useRegisterMutation } from "../store";
 import { useNavigate, Link } from "react-router-dom"; // Link is imported
 import Button from "../components/Button";
 import PathConstants from "@/routes/PathConstants"; 

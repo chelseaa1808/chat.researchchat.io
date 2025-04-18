@@ -20,7 +20,7 @@ interface UserResponse {
 export const authApi = createApi({
   reducerPath: "authApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "/api/auth",
+    baseUrl: "/api/",
     prepareHeaders: (headers, { getState }) => {
       const token = (getState() as RootState).auth.key;
       if (token) {
@@ -54,7 +54,7 @@ export const authApi = createApi({
         method: "GET",
       }),
     }),
-    getCurrentUser: builder.query({
+    getCurrentUser: builder.query<UserResponse, void>({
       providesTags: ["User"],
       query: () => ({
         url: "/users/me/",
