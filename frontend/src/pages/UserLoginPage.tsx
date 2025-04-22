@@ -4,6 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useLoginMutation } from "../store";
 import Button from "../components/Button";
 import PathConstants from "@/routes/PathConstants";
+import axios from "axios";
 
 interface LoginFormInputs {
   username: string;
@@ -22,21 +23,23 @@ const UserLoginPage: React.FC = () => {
 
   const submitForm = async (data: LoginFormInputs) => {
     try {
-      const res = await loginUser(data).unwrap();
-      if (res.access && res.refresh) {
-        // Store tokens (temporary approach — localStorage)
-        localStorage.setItem("access", res.access);
-        localStorage.setItem("refresh", res.refresh);
-
-        // Optional: dispatch a global auth action here if using Redux
-
-        navigate(PathConstants.DASHBOARD); // Change to your desired post-login route
-      }
-    } catch (err) {
-      console.error("Login failed:", err);
+      const response = await axios.post("https://chat.researchchat.io/api/auth/token/", {
+        username: data.username,
+        password: data.password,
+      });
+  
+      const { access, refresh } = response.data;
+  
+      localStorage.setItem("access_token", access);
+      localStorage.setItem("refresh_token", refresh);
+  
+      navigate("/adminpanel/");
+    } catch (error) {
+      console.error("Login failed:", error);
+      // Optional: Display error to user using state
     }
   };
-
+  
   return (
     <div className="max-w-md mx-auto px-6 py-16">
       <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">

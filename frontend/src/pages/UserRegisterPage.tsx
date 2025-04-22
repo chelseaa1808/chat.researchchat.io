@@ -4,6 +4,7 @@ import { useRegisterMutation } from "../store/authApi"; // your RTK hook
 import { useNavigate, Link } from "react-router-dom";
 import Button from "../components/Button";
 import PathConstants from "@/routes/PathConstants";
+import axios from "axios";
 
 interface RegisterFormInputs {
   username: string;
@@ -25,9 +26,17 @@ const UserRegisterPage: React.FC = () => {
 
   const submitForm = async (data: RegisterFormInputs) => {
     try {
-      await registerUser(data).unwrap();
-      navigate(PathConstants.LOGIN);
-    } catch (err) {
+      const response = await axios.post("https://chat.researchchat.io/api/auth/registration/", data);
+  
+      // If backend returns tokens (optional — only if your backend is configured to auto-login):
+      if (response.data.access) {
+        localStorage.setItem("access_token", response.data.access);
+        localStorage.setItem("refresh_token", response.data.refresh);
+        navigate("/adminpanel/");
+      } else {
+        navigate(PathConstants.LOGIN);
+      }
+    } catch (err: any) {
       console.error("Registration failed:", err);
     }
   };
