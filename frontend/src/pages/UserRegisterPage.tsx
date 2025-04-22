@@ -26,7 +26,7 @@ const UserRegisterPage: React.FC = () => {
 
   const submitForm = async (data: RegisterFormInputs) => {
     console.log("Registering with data:", data);
-    
+
     try {
       const response = await axios.post("https://chat.researchchat.io/api/auth/registration/", {
         username: data.username,
