@@ -7,7 +7,7 @@ export default defineConfig(({ command }) => ({
   base: command === "build" ? "/" : "/", // Since using a custom domain!
   plugins: [react()],
   build: {
-    outDir: "dist",
+    outDir: "docs",
     manifest: true,
     rollupOptions: {
       input: {

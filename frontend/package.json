@@ -6,10 +6,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "build": "vite build && npm run move-docs",
+    "move-docs": "rm -rf ../docs && cp -r dist ../docs",
+    "serve": "vite preview"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
