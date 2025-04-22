@@ -89,6 +89,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://chat.researchchat.io",     # Production frontend
+    "https://chelseaa1808.github.io",
     "https://chat-researchchat-io.onrender.com",
     "http://localhost:5173",            # Local dev (Vite)
     "http://127.0.0.1:5173",            # Local dev alternative
