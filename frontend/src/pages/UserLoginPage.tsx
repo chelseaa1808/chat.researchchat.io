@@ -23,7 +23,7 @@ const UserLoginPage: React.FC = () => {
 
   const submitForm = async (data: LoginFormInputs) => {
     try {
-      const response = await axios.post("https://chat.researchchat.io/api/auth/token/", {
+      const response = await axios.post("https://chat-researchchat-io.onrender.com/api/auth/token/", {
         username: data.username,
         password: data.password,
       });
@@ -39,7 +39,7 @@ const UserLoginPage: React.FC = () => {
       // Optional: Display error to user using state
     }
   };
-  
+
   return (
     <div className="max-w-md mx-auto px-6 py-16">
       <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">
