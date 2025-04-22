@@ -8,7 +8,7 @@
   "dev": "vite",
   "build": "npm run build-only && npm run move-docs",
   "build-only": "vite build",
-  "move-docs": "rm -rf ../docs && cp -a dist ../docs",
+  "move-docs": "[ -d dist ] && rm -rf ../docs && cp -a dist ../docs || echo 'dist not found!'",
   "serve": "vite preview"
 },
   "dependencies": {
