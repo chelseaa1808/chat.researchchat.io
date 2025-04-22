@@ -1,35 +1,32 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useLoginMutation } from "../store";
-import { useRegisterMutation } from "../store";
-import { useNavigate, Link } from "react-router-dom"; // Link is imported
+import { useRegisterMutation } from "../store/authApi"; // your RTK hook
+import { useNavigate, Link } from "react-router-dom";
 import Button from "../components/Button";
-import PathConstants from "@/routes/PathConstants"; 
+import PathConstants from "@/routes/PathConstants";
 
 interface RegisterFormInputs {
   username: string;
   email: string;
-  password1: string;
-  password2: string;
+  password: string;
+  re_password: string;
 }
 
 const UserRegisterPage: React.FC = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
     watch,
+    formState: { errors },
   } = useForm<RegisterFormInputs>();
 
-  const [registerUser, result] = useRegisterMutation();
+  const [registerUser, { isLoading, isError, error }] = useRegisterMutation();
   const navigate = useNavigate();
 
   const submitForm = async (data: RegisterFormInputs) => {
     try {
-      const res = await registerUser(data).unwrap();
-      if (res) {
-        navigate("/login"); // Redirect after success
-      }
+      await registerUser(data).unwrap();
+      navigate(PathConstants.LOGIN);
     } catch (err) {
       console.error("Registration failed:", err);
     }
@@ -52,7 +49,7 @@ const UserRegisterPage: React.FC = () => {
           <input
             type="text"
             {...register("username", { required: "Username is required" })}
-            className="w-full px-4 py-2 border rounded-md bg-gray-50 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border rounded-md bg-gray-50 dark:bg-gray-700 dark:text-white"
           />
           {errors.username && (
             <p className="text-sm text-red-500 mt-1">{errors.username.message}</p>
@@ -66,7 +63,7 @@ const UserRegisterPage: React.FC = () => {
           <input
             type="email"
             {...register("email", { required: "Email is required" })}
-            className="w-full px-4 py-2 border rounded-md bg-gray-50 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border rounded-md bg-gray-50 dark:bg-gray-700 dark:text-white"
           />
           {errors.email && (
             <p className="text-sm text-red-500 mt-1">{errors.email.message}</p>
@@ -79,11 +76,11 @@ const UserRegisterPage: React.FC = () => {
           </label>
           <input
             type="password"
-            {...register("password1", { required: "Password is required" })}
-            className="w-full px-4 py-2 border rounded-md bg-gray-50 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            {...register("password", { required: "Password is required" })}
+            className="w-full px-4 py-2 border rounded-md bg-gray-50 dark:bg-gray-700 dark:text-white"
           />
-          {errors.password1 && (
-            <p className="text-sm text-red-500 mt-1">{errors.password1.message}</p>
+          {errors.password && (
+            <p className="text-sm text-red-500 mt-1">{errors.password.message}</p>
           )}
         </div>
 
@@ -93,23 +90,24 @@ const UserRegisterPage: React.FC = () => {
           </label>
           <input
             type="password"
-            {...register("password2", {
+            {...register("re_password", {
               required: "Please confirm your password",
               validate: (value) =>
-                value === watch("password1") || "Passwords do not match",
+                value === watch("password") || "Passwords do not match",
             })}
-            className="w-full px-4 py-2 border rounded-md bg-gray-50 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border rounded-md bg-gray-50 dark:bg-gray-700 dark:text-white"
           />
-          {errors.password2 && (
-            <p className="text-sm text-red-500 mt-1">{errors.password2.message}</p>
+          {errors.re_password && (
+            <p className="text-sm text-red-500 mt-1">{errors.re_password.message}</p>
           )}
         </div>
 
         <div className="pt-2">
-          <Button type="submit" disabled={result.isLoading}>
-            {result.isLoading ? "Registering..." : "Register"}
+          <Button type="submit" disabled={isLoading}>
+            {isLoading ? "Registering..." : "Register"}
           </Button>
         </div>
+
         <p className="mt-4 text-sm text-center text-gray-600 dark:text-gray-300">
           Already have an account?{" "}
           <Link
@@ -120,9 +118,11 @@ const UserRegisterPage: React.FC = () => {
           </Link>
         </p>
 
-        {result.isError && (
+        {isError && (
           <p className="text-sm text-red-500">
-            Something went wrong. Please try again.
+            {(error as any)?.data?.email?.[0] ||
+              (error as any)?.data?.non_field_errors?.[0] ||
+              "Something went wrong. Please try again."}
           </p>
         )}
       </form>

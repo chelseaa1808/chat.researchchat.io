@@ -15,6 +15,7 @@ from pathlib import Path
 
 import dj_database_url
 import environ
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -208,6 +209,7 @@ REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework.authentication.TokenAuthentication",
         "chattr_gpt.authentication.BearerAuthentication",
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
         "rest_framework.authentication.SessionAuthentication",
     ],
     "DEFAULT_PERMISSION_CLASSES": [
@@ -221,7 +223,12 @@ REST_FRAMEWORK = {
     },
 }
 
-
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+    'AUTH_HEADER_TYPES': ('Bearer',),
+    'TOKEN_OBTAIN_SERIALIZER': 'users.jwt_serializers.CustomTokenObtainPairSerializer',
+}
 
 # Email + account registration behavior
 ACCOUNT_EMAIL_REQUIRED = True
@@ -244,8 +251,9 @@ LOGIN_REDIRECT_URL = "/"
 ACCOUNT_LOGOUT_REDIRECT_URL = "/login/"
 ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = "/"
 
-# Optional: support auth tokens (disable if using JWT)
-REST_USE_JWT = False
+# support auth tokens (disable if using JWT)
+REST_USE_JWT = True
+
 origins_list = [
     "http://localhost:5173",
     "http://localhost:8000",

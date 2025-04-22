@@ -1,1 +1,0 @@
-import{c as e,j as t,R as o}from"./client-642ef077.js";import r from"./AdminDashboardPage-dc1b33c2.js";import"./authApi-e4360032.js";e.createRoot(document.getElementById("root")).render(t.jsx(o.StrictMode,{children:t.jsx(r,{})}));

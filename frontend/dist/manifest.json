@@ -6,13 +6,13 @@
       "_index-a0f7b105.js"
     ]
   },
-  "_ChatHistory-bf67929f.js": {
-    "file": "assets/ChatHistory-bf67929f.js",
+  "_ChatHistory-074abdb4.js": {
+    "file": "assets/ChatHistory-074abdb4.js",
     "imports": [
       "_client-642ef077.js",
-      "_authApi-e4360032.js",
+      "_authApi-94cdca0f.js",
       "_index-a0f7b105.js",
-      "_XMarkIcon-8647a2bb.js"
+      "_XMarkIcon-e95b6b05.js"
     ]
   },
   "_Table-3094a8ba.js": {
@@ -21,15 +21,15 @@
       "_client-642ef077.js"
     ]
   },
-  "_XMarkIcon-8647a2bb.js": {
-    "file": "assets/XMarkIcon-8647a2bb.js",
+  "_XMarkIcon-e95b6b05.js": {
+    "file": "assets/XMarkIcon-e95b6b05.js",
     "imports": [
-      "_authApi-e4360032.js",
+      "_authApi-94cdca0f.js",
       "_client-642ef077.js"
     ]
   },
-  "_authApi-e4360032.js": {
-    "file": "assets/authApi-e4360032.js",
+  "_authApi-94cdca0f.js": {
+    "file": "assets/authApi-94cdca0f.js",
     "imports": [
       "_client-642ef077.js"
     ]
@@ -53,24 +53,24 @@
     "src": "about.html"
   },
   "adminpanel.html": {
-    "file": "assets/adminpanel-74600ec5.js",
+    "file": "assets/adminpanel-a1e9dfac.js",
     "imports": [
       "_client-642ef077.js",
       "src/pages/AdminDashboardPage.tsx",
-      "_authApi-e4360032.js"
+      "_authApi-94cdca0f.js"
     ],
     "isEntry": true,
     "src": "adminpanel.html"
   },
   "chat.html": {
-    "file": "assets/chat-f7914857.js",
+    "file": "assets/chat-f5007982.js",
     "imports": [
       "_client-642ef077.js",
       "src/pages/ChatPage.tsx",
-      "_authApi-e4360032.js",
-      "_ChatHistory-bf67929f.js",
+      "_authApi-94cdca0f.js",
+      "_ChatHistory-074abdb4.js",
       "_index-a0f7b105.js",
-      "_XMarkIcon-8647a2bb.js"
+      "_XMarkIcon-e95b6b05.js"
     ],
     "isEntry": true,
     "src": "chat.html"
@@ -95,11 +95,11 @@
       "src/pages/UserProfilePage.tsx",
       "src/pages/AdminDashboardPage.tsx"
     ],
-    "file": "assets/main-c3dbf3c0.js",
+    "file": "assets/main-c3e7b189.js",
     "imports": [
       "_client-642ef077.js",
-      "_authApi-e4360032.js",
-      "_XMarkIcon-8647a2bb.js"
+      "_authApi-94cdca0f.js",
+      "_XMarkIcon-e95b6b05.js"
     ],
     "isEntry": true,
     "src": "index.html"
@@ -113,76 +113,76 @@
     "src": "src/pages/About.tsx"
   },
   "src/pages/AdminDashboardPage.tsx": {
-    "file": "assets/AdminDashboardPage-dc1b33c2.js",
+    "file": "assets/AdminDashboardPage-9d495a0d.js",
     "imports": [
       "_client-642ef077.js",
-      "_authApi-e4360032.js"
+      "_authApi-94cdca0f.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/AdminDashboardPage.tsx"
   },
   "src/pages/BotPage.tsx": {
-    "file": "assets/BotPage-d1eddb99.js",
+    "file": "assets/BotPage-125e6d7b.js",
     "imports": [
       "_client-642ef077.js",
-      "_authApi-e4360032.js",
+      "_authApi-94cdca0f.js",
       "_Table-3094a8ba.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/BotPage.tsx"
   },
   "src/pages/ChatHistoryPage.tsx": {
-    "file": "assets/ChatHistoryPage-6d143eaa.js",
+    "file": "assets/ChatHistoryPage-3f19fc9b.js",
     "imports": [
       "_client-642ef077.js",
-      "_ChatHistory-bf67929f.js",
-      "_authApi-e4360032.js",
+      "_ChatHistory-074abdb4.js",
+      "_authApi-94cdca0f.js",
       "_index-a0f7b105.js",
-      "_XMarkIcon-8647a2bb.js"
+      "_XMarkIcon-e95b6b05.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/ChatHistoryPage.tsx"
   },
   "src/pages/ChatPage.tsx": {
-    "file": "assets/ChatPage-a4109e92.js",
+    "file": "assets/ChatPage-f74a9c69.js",
     "imports": [
       "_client-642ef077.js",
-      "_authApi-e4360032.js",
-      "_ChatHistory-bf67929f.js",
-      "_XMarkIcon-8647a2bb.js",
+      "_authApi-94cdca0f.js",
+      "_ChatHistory-074abdb4.js",
+      "_XMarkIcon-e95b6b05.js",
       "_index-a0f7b105.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/ChatPage.tsx"
   },
   "src/pages/ConversationPage.tsx": {
-    "file": "assets/ConversationPage-87fa9fd5.js",
+    "file": "assets/ConversationPage-2fa440dc.js",
     "imports": [
       "_client-642ef077.js",
-      "_authApi-e4360032.js",
+      "_authApi-94cdca0f.js",
       "_Table-3094a8ba.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/ConversationPage.tsx"
   },
   "src/pages/Home.tsx": {
-    "file": "assets/Home-0e1fcd62.js",
+    "file": "assets/Home-9a436a23.js",
     "imports": [
       "_client-642ef077.js",
-      "_authApi-e4360032.js",
+      "_authApi-94cdca0f.js",
       "index.html",
-      "_XMarkIcon-8647a2bb.js"
+      "_XMarkIcon-e95b6b05.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/Home.tsx"
   },
   "src/pages/UserLoginPage.tsx": {
-    "file": "assets/UserLoginPage-b5e16efe.js",
+    "file": "assets/UserLoginPage-f4a03748.js",
     "imports": [
       "_client-642ef077.js",
       "_Button-763ed5d0.js",
-      "_XMarkIcon-8647a2bb.js",
-      "_authApi-e4360032.js",
+      "_XMarkIcon-e95b6b05.js",
+      "_authApi-94cdca0f.js",
       "index.html",
       "_index-a0f7b105.js"
     ],
@@ -190,23 +190,23 @@
     "src": "src/pages/UserLoginPage.tsx"
   },
   "src/pages/UserProfilePage.tsx": {
-    "file": "assets/UserProfilePage-39affd48.js",
+    "file": "assets/UserProfilePage-21bb2fb9.js",
     "imports": [
       "_client-642ef077.js",
-      "_authApi-e4360032.js"
+      "_authApi-94cdca0f.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/UserProfilePage.tsx"
   },
   "src/pages/UserRegisterPage.tsx": {
-    "file": "assets/UserRegisterPage-6711763e.js",
+    "file": "assets/UserRegisterPage-400c03fa.js",
     "imports": [
       "_client-642ef077.js",
       "_Button-763ed5d0.js",
-      "_authApi-e4360032.js",
+      "_XMarkIcon-e95b6b05.js",
+      "_authApi-94cdca0f.js",
       "index.html",
-      "_index-a0f7b105.js",
-      "_XMarkIcon-8647a2bb.js"
+      "_index-a0f7b105.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/UserRegisterPage.tsx"

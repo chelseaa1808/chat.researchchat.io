@@ -1,17 +1,28 @@
 from django.contrib import admin
 from django.urls import include, path, re_path
 from django.views.generic import TemplateView
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 
 urlpatterns = [
     path("adminpanel/", admin.site.urls),
+    
+    # JWT auth
+    path("api/auth/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
+    path("api/auth/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
+
+    # dj-rest-auth
     path("api/auth/", include("dj_rest_auth.urls")),
     path("api/auth/registration/", include("dj_rest_auth.registration.urls")),
+
     path("api/users/", include("users.urls")),
     path("api/", include("chat.urls")),
     path("accounts/", include("allauth.urls")),
 ]
 
-# This catches ALL other routes like /login, /register, etc.
+# Catch-all for React frontend
 urlpatterns += [
     re_path(r"^(?!api/).*", TemplateView.as_view(template_name="frontend/index.html"), name="spa-catchall"),
 ]

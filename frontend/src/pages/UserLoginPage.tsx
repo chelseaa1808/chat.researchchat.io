@@ -1,9 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate, Link } from "react-router-dom";
 import { useLoginMutation } from "../store";
-import { useNavigate, Link } from "react-router-dom"; // Link is imported
 import Button from "../components/Button";
-import PathConstants from "@/routes/PathConstants"; 
+import PathConstants from "@/routes/PathConstants";
 
 interface LoginFormInputs {
   username: string;
@@ -11,18 +11,29 @@ interface LoginFormInputs {
 }
 
 const UserLoginPage: React.FC = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm<LoginFormInputs>();
-  const [login, result] = useLoginMutation();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<LoginFormInputs>();
+
+  const [loginUser, result] = useLoginMutation();
   const navigate = useNavigate();
 
   const submitForm = async (data: LoginFormInputs) => {
     try {
-      const res = await login(data).unwrap();
-      if (res) {
-        navigate("/"); // Redirect after successful login
+      const res = await loginUser(data).unwrap();
+      if (res.access && res.refresh) {
+        // Store tokens (temporary approach — localStorage)
+        localStorage.setItem("access", res.access);
+        localStorage.setItem("refresh", res.refresh);
+
+        // Optional: dispatch a global auth action here if using Redux
+
+        navigate(PathConstants.DASHBOARD); // Change to your desired post-login route
       }
     } catch (err) {
-      console.error("Login failed", err);
+      console.error("Login failed:", err);
     }
   };
 
@@ -31,6 +42,7 @@ const UserLoginPage: React.FC = () => {
       <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">
         Login to Your Account
       </h1>
+
       <form
         onSubmit={handleSubmit(submitForm)}
         className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md space-y-6"
@@ -68,8 +80,9 @@ const UserLoginPage: React.FC = () => {
             {result.isLoading ? "Logging in..." : "Login"}
           </Button>
         </div>
+
         <p className="mt-4 text-sm text-center text-gray-600 dark:text-gray-300">
-          Don’t have an account?{" "}
+          Don't have an account?{" "}
           <Link
             to={PathConstants.REGISTER}
             className="text-blue-600 dark:text-blue-400 hover:underline"
