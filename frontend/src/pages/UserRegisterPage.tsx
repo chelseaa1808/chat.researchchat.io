@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useRegisterMutation } from "../store/authApi"; // your RTK hook
+import { useRegisterMutation } from "../store/apis/authApi"; // RTK hook
 import { useNavigate, Link } from "react-router-dom";
 import Button from "../components/Button";
 import PathConstants from "@/routes/PathConstants";
