@@ -1,11 +1,4 @@
 {
-  "_Button-763ed5d0.js": {
-    "file": "assets/Button-763ed5d0.js",
-    "imports": [
-      "_client-642ef077.js",
-      "_index-a0f7b105.js"
-    ]
-  },
   "_ChatHistory-074abdb4.js": {
     "file": "assets/ChatHistory-074abdb4.js",
     "imports": [
@@ -32,6 +25,13 @@
     "file": "assets/authApi-94cdca0f.js",
     "imports": [
       "_client-642ef077.js"
+    ]
+  },
+  "_axios-bfc92966.js": {
+    "file": "assets/axios-bfc92966.js",
+    "imports": [
+      "_client-642ef077.js",
+      "_index-a0f7b105.js"
     ]
   },
   "_client-642ef077.js": {
@@ -95,7 +95,7 @@
       "src/pages/UserProfilePage.tsx",
       "src/pages/AdminDashboardPage.tsx"
     ],
-    "file": "assets/main-c3e7b189.js",
+    "file": "assets/main-aa725f1d.js",
     "imports": [
       "_client-642ef077.js",
       "_authApi-94cdca0f.js",
@@ -166,7 +166,7 @@
     "src": "src/pages/ConversationPage.tsx"
   },
   "src/pages/Home.tsx": {
-    "file": "assets/Home-9a436a23.js",
+    "file": "assets/Home-042a95d6.js",
     "imports": [
       "_client-642ef077.js",
       "_authApi-94cdca0f.js",
@@ -177,12 +177,12 @@
     "src": "src/pages/Home.tsx"
   },
   "src/pages/UserLoginPage.tsx": {
-    "file": "assets/UserLoginPage-f4a03748.js",
+    "file": "assets/UserLoginPage-0d005258.js",
     "imports": [
       "_client-642ef077.js",
-      "_Button-763ed5d0.js",
-      "_XMarkIcon-e95b6b05.js",
+      "_axios-bfc92966.js",
       "_authApi-94cdca0f.js",
+      "_XMarkIcon-e95b6b05.js",
       "index.html",
       "_index-a0f7b105.js"
     ],
@@ -199,14 +199,14 @@
     "src": "src/pages/UserProfilePage.tsx"
   },
   "src/pages/UserRegisterPage.tsx": {
-    "file": "assets/UserRegisterPage-400c03fa.js",
+    "file": "assets/UserRegisterPage-f36970de.js",
     "imports": [
       "_client-642ef077.js",
-      "_Button-763ed5d0.js",
-      "_XMarkIcon-e95b6b05.js",
+      "_axios-bfc92966.js",
       "_authApi-94cdca0f.js",
       "index.html",
-      "_index-a0f7b105.js"
+      "_index-a0f7b105.js",
+      "_XMarkIcon-e95b6b05.js"
     ],
     "isDynamicEntry": true,
     "src": "src/pages/UserRegisterPage.tsx"

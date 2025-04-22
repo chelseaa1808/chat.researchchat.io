@@ -25,8 +25,15 @@ const UserRegisterPage: React.FC = () => {
   const navigate = useNavigate();
 
   const submitForm = async (data: RegisterFormInputs) => {
+    console.log("Registering with data:", data);
+    
     try {
-      const response = await axios.post("https://chat.researchchat.io/api/auth/registration/", data);
+      const response = await axios.post("https://chat.researchchat.io/api/auth/registration/", {
+        username: data.username,
+        email: data.email,
+        password1: data.password,
+        password2: data.re_password,
+      });
   
       // If backend returns tokens (optional — only if your backend is configured to auto-login):
       if (response.data.access) {
@@ -38,6 +45,7 @@ const UserRegisterPage: React.FC = () => {
       }
     } catch (err: any) {
       console.error("Registration failed:", err);
+      
     }
   };
 
