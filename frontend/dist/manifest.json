@@ -95,7 +95,7 @@
       "src/pages/UserProfilePage.tsx",
       "src/pages/AdminDashboardPage.tsx"
     ],
-    "file": "assets/main-804f7706.js",
+    "file": "assets/main-a2b99b43.js",
     "imports": [
       "_client-642ef077.js",
       "_authApi-94cdca0f.js",
@@ -166,7 +166,7 @@
     "src": "src/pages/ConversationPage.tsx"
   },
   "src/pages/Home.tsx": {
-    "file": "assets/Home-3e4aaa16.js",
+    "file": "assets/Home-aef259df.js",
     "imports": [
       "_client-642ef077.js",
       "_authApi-94cdca0f.js",
@@ -177,7 +177,7 @@
     "src": "src/pages/Home.tsx"
   },
   "src/pages/UserLoginPage.tsx": {
-    "file": "assets/UserLoginPage-060e5745.js",
+    "file": "assets/UserLoginPage-bb9d8fc4.js",
     "imports": [
       "_client-642ef077.js",
       "_axios-bfc92966.js",
@@ -199,7 +199,7 @@
     "src": "src/pages/UserProfilePage.tsx"
   },
   "src/pages/UserRegisterPage.tsx": {
-    "file": "assets/UserRegisterPage-687bcbb1.js",
+    "file": "assets/UserRegisterPage-a216aae4.js",
     "imports": [
       "_client-642ef077.js",
       "_axios-bfc92966.js",
