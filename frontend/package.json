@@ -6,7 +6,8 @@
   "type": "module",
 "scripts": {
   "dev": "vite",
-  "build": "vite build && npm run move-docs",
+  "build": "npm run build-only && npm run move-docs",
+  "build-only": "vite build",
   "move-docs": "rm -rf ../docs && cp -a dist ../docs",
   "serve": "vite preview"
 },
