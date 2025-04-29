@@ -1,10 +1,11 @@
+from django.contrib.auth import get_user_model
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
-from rest_framework_simplejwt.views import TokenObtainPairView
+from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework import generics, status
 from .jwt_serializers import CustomTokenObtainPairSerializer
-from rest_framework import status, generics
-from django.contrib.auth import get_user_model
+from .serializer import UserSerializer, RegisterSerializer 
+from rest_framework_simplejwt.views import TokenObtainPairView
 
 User = get_user_model()
 
