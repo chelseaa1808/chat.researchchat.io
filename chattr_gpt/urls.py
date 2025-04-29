@@ -11,7 +11,8 @@ urlpatterns = [
     path("adminpanel/", admin.site.urls),
 
     path("api/auth/login/", CookieTokenObtainPairView.as_view(), name="custom_login"),
-    
+
+    path("api/auth/logout/", LogoutView.as_view(), name="logout"),
     # JWT auth
     path("api/auth/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("api/auth/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
