@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import include, path, re_path
 from django.views.generic import TemplateView
-from users.views import LogoutView, CookieTokenObtainPairView
+from users.views import LogoutView, RegisterView, CookieTokenObtainPairView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -13,13 +13,13 @@ urlpatterns = [
     path("api/auth/login/", CookieTokenObtainPairView.as_view(), name="custom_login"),
 
     path("api/auth/logout/", LogoutView.as_view(), name="logout"),
+    path("api/auth/registration/", RegisterView.as_view(), name="registration"),
     # JWT auth
     path("api/auth/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("api/auth/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
 
     # dj-rest-auth
     path("api/auth/", include("dj_rest_auth.urls")),
-    path("api/auth/registration/", include("dj_rest_auth.registration.urls")),
 
     path("api/users/", include("users.urls")),
     path("api/", include("chat.urls")),
