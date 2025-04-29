@@ -1,6 +1,50 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
+from rest_framework_simplejwt.views import TokenObtainPairView
+from .jwt_serializers import CustomTokenObtainPairSerializer
+from rest_framework import status
+
+class CookieTokenObtainPairView(TokenObtainPairView):
+    serializer_class = CustomTokenObtainPairSerializer
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+
+        try:
+            serializer.is_valid(raise_exception=True)
+        except Exception as e:
+            return Response({'detail': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
+
+        access_token = serializer.validated_data["access"]
+        refresh_token = serializer.validated_data["refresh"]
+
+        response = Response({
+            "message": "Login successful",
+            "user": {
+                "id": serializer.user.id,
+                "username": serializer.user.username,
+                "email": serializer.user.email
+            }
+        })
+
+        # Set HttpOnly cookies
+        response.set_cookie(
+            key="access_token",
+            value=access_token,
+            httponly=True,
+            secure=True,  # Requires HTTPS in production
+            samesite="Lax"
+        )
+        response.set_cookie(
+            key="refresh_token",
+            value=refresh_token,
+            httponly=True,
+            secure=True,
+            samesite="Lax"
+        )
+
+        return response
 
 class CurrentUserView(APIView):
     permission_classes = [IsAuthenticated]
