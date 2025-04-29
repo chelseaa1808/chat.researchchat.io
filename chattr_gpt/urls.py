@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import include, path, re_path
 from django.views.generic import TemplateView
+from users.views import CookieTokenObtainPairView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -8,6 +9,8 @@ from rest_framework_simplejwt.views import (
 
 urlpatterns = [
     path("adminpanel/", admin.site.urls),
+
+    path("api/auth/login/", CookieTokenObtainPairView.as_view(), name="custom_login"),
     
     # JWT auth
     path("api/auth/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
