@@ -23,20 +23,12 @@ const UserLoginPage: React.FC = () => {
 
   const submitForm = async (data: LoginFormInputs) => {
     try {
-      const response = await axios.post("https://chat-researchchat-io.onrender.com/api/auth/token/", {
-        username: data.username,
-        password: data.password,
-      });
-  
-      const { access, refresh } = response.data;
-  
-      localStorage.setItem("access_token", access);
-      localStorage.setItem("refresh_token", refresh);
+      const response = await loginUser(data).unwrap(); 
   
       navigate("/adminpanel/");
     } catch (error) {
       console.error("Login failed:", error);
-      // Optional: Display error to user using state
+      // Display error to user using state
     }
   };
 
