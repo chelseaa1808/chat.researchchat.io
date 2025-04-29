@@ -5,6 +5,8 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 from .jwt_serializers import CustomTokenObtainPairSerializer
 from rest_framework import status
 
+User = get_user_model()
+
 class CookieTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
 
@@ -56,6 +58,17 @@ class CurrentUserView(APIView):
             "username": user.username,
             "email": user.email,
         })
+class RegisterView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [AllowAny]
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"message": "User created"}, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class LogoutView(APIView):
     def post(self, request):
