@@ -1,5 +1,4 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { RootState } from "../index"; // Adjust if your store file is named differently
 import { setKey, logout } from "../slices/authSlice";
 
 interface LoginRequest {
@@ -8,7 +7,12 @@ interface LoginRequest {
 }
 
 interface LoginResponse {
-  key: string;
+  message: string;
+  user: {
+    id: number;
+    username: string;
+    email: string;
+  };
 }
 
 interface UserResponse {
@@ -21,38 +25,25 @@ export const authApi = createApi({
   reducerPath: "authApi",
   baseQuery: fetchBaseQuery({
     baseUrl: "/api/",
-    prepareHeaders: (headers, { getState }) => {
-      const token = (getState() as RootState).auth.key;
-      if (token) {
-        headers.set("Authorization", `Bearer ${token}`);
-      }
-      return headers;
-    },
+    credentials: "include",
   }),
   tagTypes: ["User"],
   endpoints: (builder) => ({
     login: builder.mutation<LoginResponse, LoginRequest>({
       invalidatesTags: ["User"],
       query: (credentials) => ({
-        url: "/login/",
+        url: "/auth/login/",
         method: "POST",
         body: credentials,
       }),
-      async onQueryStarted(_, { dispatch, queryFulfilled }) {
+      async onQueryStarted(_, { queryFulfilled }) {
         try {
-          const { data } = await queryFulfilled;
-          dispatch(setKey({ key: data.key }));
+          await queryFulfilled;
+          
         } catch (err) {
-          // Optional: toast, console.error, or silent fail
+          console.error("Login failed:", err)
         }
       },
-    }),
-    getUser: builder.query<UserResponse, void>({
-      providesTags: ["User"],
-      query: () => ({
-        url: "/user/",
-        method: "GET",
-      }),
     }),
     getCurrentUser: builder.query<UserResponse, void>({
       providesTags: ["User"],
@@ -64,7 +55,7 @@ export const authApi = createApi({
     register: builder.mutation({
         invalidatesTags: ["User"],
         query: (credentials) => ({
-          url: `/registration/`, // <-- make sure this matches your Django/Djoser/DRF path
+          url: `/auth/registration/`, 
           method: "POST",
           body: credentials,
         }),
@@ -73,7 +64,7 @@ export const authApi = createApi({
     logout: builder.mutation<void, void>({
       invalidatesTags: ["User"],
       query: () => ({
-        url: "/logout/",
+        url: "/auth/logout/",
         method: "POST",
       }),
       async onQueryStarted(_, { dispatch }) {
@@ -85,7 +76,6 @@ export const authApi = createApi({
 
 export const {
   useLoginMutation,
-  useGetUserQuery,
   useLogoutMutation,
   useRegisterMutation, 
   useGetCurrentUserQuery,
