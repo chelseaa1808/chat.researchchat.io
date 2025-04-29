@@ -28,19 +28,15 @@ const UserRegisterPage: React.FC = () => {
     console.log("Registering with data:", data);
 
     try {
-      const response = await axios.post("https://chat-researchchat-io.onrender.com/api/auth/registration/", {
-        username: data.username,
-        email: data.email,
-        password1: data.password,
-        password2: data.re_password,
-      });
+      try {
+        const result = await registerUser({
+          username: data.username,
+          email: data.email,
+          password1: data.password,
+          password2: data.re_password,
+        }).unwrap();
   
-      // If backend returns tokens (optional — only if your backend is configured to auto-login):
-      if (response.data.access) {
-        localStorage.setItem("access_token", response.data.access);
-        localStorage.setItem("refresh_token", response.data.refresh);
-        navigate("/adminpanel/");
-      } else {
+      // Redirect after registration
         navigate(PathConstants.LOGIN);
       }
     } catch (err: any) {
