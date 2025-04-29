@@ -9,7 +9,7 @@ class UserModelTests(TestCase):
     def setUp(self):
         self.user = User.objects.create_user(
             username='testuser',
-            email='test@example.com',
+            email='bigdata.grp10@gmail.com',
             password='securepassword123',
             name='Test User',
             bio='Bio test',
@@ -18,7 +18,7 @@ class UserModelTests(TestCase):
 
     def test_user_creation(self):
         self.assertEqual(self.user.username, 'testuser')
-        self.assertEqual(self.user.email, 'test@example.com')
+        self.assertEqual(self.user.email, 'bigdata.grp10@gmail.com')
         self.assertTrue(self.user.check_password('securepassword123'))
 
     def test_profile_created_on_user_creation(self):
