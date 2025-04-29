@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 def handle_user_created(sender, instance, created, **kwargs):
     if created:
         # Log creation
-        logger.info(f"✅ New user created: {instance.username} (ID: {instance.id})")
+        logger.info(f" New user created: {instance.username} (ID: {instance.id})")
 
         # Create associated profile
         Profile.objects.get_or_create(user=instance)
@@ -32,4 +32,4 @@ def handle_user_created(sender, instance, created, **kwargs):
                 fail_silently=False,  # Make this True in production if no email backend is configured
             )
         except Exception as e:
-            logger.warning(f"📧 Failed to send welcome email to {instance.email}: {e}")
+            logger.warning(f" Failed to send welcome email to {instance.email}: {e}")
