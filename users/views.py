@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework import generics, status
 from .jwt_serializers import CustomTokenObtainPairSerializer
-from .serializer import UserSerializer, RegisterSerializer 
+from .serializers import UserSerializer, RegisterSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 
 User = get_user_model()
@@ -32,12 +32,11 @@ class CookieTokenObtainPairView(TokenObtainPairView):
             }
         })
 
-        # Set HttpOnly cookies
         response.set_cookie(
             key="access_token",
             value=access_token,
             httponly=True,
-            secure=True,  # Requires HTTPS in production
+            secure=True,  # Set to False in local dev if needed
             samesite="Lax"
         )
         response.set_cookie(
@@ -60,6 +59,7 @@ class CurrentUserView(APIView):
             "username": user.username,
             "email": user.email,
         })
+
 class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = RegisterSerializer
@@ -78,3 +78,4 @@ class LogoutView(APIView):
         response.delete_cookie("access_token")
         response.delete_cookie("refresh_token")
         return response
+
