@@ -7,7 +7,11 @@ const PathConstants = {
   NEW_CHAT: "/chat/:slug",
   CHAT_HISTORY: "/bots/:name/:uuid",
   CHAT_PAGE: "/chat/:slug/:uuid",
-  ADMIN_PANEL_BASE: "/adminpanel",
+  LOGIN: "/login",
+  LOGOUT: "/logout",
+  REGISTER: "/register",
+  PROFILE: "/profile",
+  ADMIN_DASHBOARD: "/adminpanel",
   ADMIN_BOTS: "/adminpanel/bots",
   ADMIN_NEW_BOT: "/adminpanel/bots/new",
   ADMIN_CHAT_HISTORY: "/adminpanel/chat-history",
@@ -15,11 +19,6 @@ const PathConstants = {
   ADMIN_CONVERSATIONS: "/adminpanel/conversations",
   ADMIN_PROFILE: "/adminpanel/profile",
   ADMIN_CONDITIONS: "/adminpanel/conditions",
-  LOGIN: "/login",
-  LOGOUT: "/logout",
-  REGISTER: "/register",
-  PROFILE: "/profile",
-  ADMIN_DASHBOARD: "/admin-dashboard", 
 } as const;
   
   export type PathKey = keyof typeof PathConstants;
