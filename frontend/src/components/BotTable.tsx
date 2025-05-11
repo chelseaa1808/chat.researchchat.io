@@ -6,7 +6,10 @@ type BotData = {
   name: string;
   [key: string]: any; // Add more specific fields as needed
 };
-
+interface Header {
+  key: string;
+  name: string;
+}
 interface BotTableProps {
   headers: string[];
   tableData: BotData[];
