@@ -7,24 +7,25 @@ const BotPage: React.FC = () => {
 
   const headers = [
     { key: "display_name", name: "Display Name" },
+    { key: "description", name: "Description" },
     { key: "model", name: "Model" },
     { key: "bot_initiates", name: "Bot Initiates?" },
-    { key: "system_message", name: "System Message" },
   ];
 
   return (
     <div className="max-w-6xl px-6 py-10 mx-auto">
-      <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
-        Available Bots
-      </h1>
-
-      {isLoading ? (
-        <p className="text-gray-500 dark:text-gray-400">Loading bots...</p>
-      ) : isError ? (
-        <p className="text-red-600 dark:text-red-400">Failed to load bots.</p>
-      ) : (
-        <BotTable headers={headers} tableData={data} />
-      )}
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-xl font-semibold text-gray-800 dark:text-white">
+          Listing Bots
+        </h1>
+        <button
+          className="px-4 py-2 text-white bg-black rounded hover:opacity-90"
+          onClick={() navigate("/bots/new")}
+        >
+            New Bot
+        </button>
+      </div>
+    
     </div>
   );
 };
