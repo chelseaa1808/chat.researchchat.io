@@ -19,14 +19,70 @@ const AdminDashboard = React.lazy(() => import("../pages/AdminDashboardPage"));
 
 // Admin Panel Subroutes (if not protected, wrap manually)
 const adminRoutes = [
-  { path: "/adminpanel", element: <AdminDashboard /> },
-  { path: "/adminpanel/bots", element: <BotPage /> },
-  { path: "/adminpanel/bots/new", element: <NewBotForm /> },
-  { path: "/adminpanel/chat-history", element: <ChatHistoryPage /> },
-  { path: "/adminpanel/chats", element: <ChatPage /> },
-  { path: "/adminpanel/conversations", element: <ConversationPage /> },
-  { path: "/adminpanel/profile", element: <UserProfilePage /> },
-  { path: "/adminpanel/conditions", element: <Conditions /> },
+  {
+    path: PathConstants.ADMIN_DASHBOARD,
+    element: (
+      <RequireAuth>
+        <AdminDashboard />
+      </RequireAuth>
+    ),
+  },
+  {
+    path: PathConstants.ADMIN_BOTS,
+    element: (
+      <RequireAuth>
+        <BotPage />
+      </RequireAuth>
+    ),
+  },
+  {
+    path: PathConstants.ADMIN_NEW_BOT,
+    element: (
+      <RequireAuth>
+        <NewBotForm />
+      </RequireAuth>
+    ),
+  },
+  {
+    path: PathConstants.ADMIN_CHAT_HISTORY,
+    element: (
+      <RequireAuth>
+        <ChatHistoryPage />
+      </RequireAuth>
+    ),
+  },
+  {
+    path: PathConstants.ADMIN_CHATS,
+    element: (
+      <RequireAuth>
+        <ChatPage />
+      </RequireAuth>
+    ),
+  },
+  {
+    path: PathConstants.ADMIN_CONVERSATIONS,
+    element: (
+      <RequireAuth>
+        <ConversationPage />
+      </RequireAuth>
+    ),
+  },
+  {
+    path: PathConstants.ADMIN_PROFILE,
+    element: (
+      <RequireAuth>
+        <UserProfile />
+      </RequireAuth>
+    ),
+  },
+  {
+    path: PathConstants.ADMIN_CONDITIONS,
+    element: (
+      <RequireAuth>
+        <Conditions />
+      </RequireAuth>
+    ),
+  },
 ];
 
 const routes = [
