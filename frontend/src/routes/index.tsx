@@ -8,6 +8,7 @@ const About = React.lazy(() => import("../pages/About"));
 const Home = React.lazy(() => import("../pages/Home"));
 const ChatPage = React.lazy(() => import("../pages/ChatPage"));
 const BotPage = React.lazy(() => import("../pages/BotPage"));
+const NewBotForm = React.lazy(() => import("../pages/NewBotForm"));
 const ConversationPage = React.lazy(() => import("../pages/ConversationPage"));
 const ChatHistoryPage = React.lazy(() => import("../pages/ChatHistoryPage"));
 const Conditions = React.lazy(() => import("../pages/Conditions"));
@@ -20,6 +21,7 @@ const AdminDashboard = React.lazy(() => import("../pages/AdminDashboardPage"));
 const adminRoutes = [
   { path: "/adminpanel", element: <AdminDashboard /> },
   { path: "/adminpanel/bots", element: <BotPage /> },
+  { path: "/adminpanel/bots/new", element: <NewBotForm /> },
   { path: "/adminpanel/chat-history", element: <ChatHistoryPage /> },
   { path: "/adminpanel/chats", element: <ChatPage /> },
   { path: "/adminpanel/conversations", element: <ConversationPage /> },
