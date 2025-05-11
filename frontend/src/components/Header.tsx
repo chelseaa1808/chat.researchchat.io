@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/store";
 import { Link } from "react-router-dom";
 import { logout } from "@/store/slices/authSlice"; 
-import ResearchChatLogo from "./ChattrLogo";
+import ResearchChatLogo from "./ChatLogo";
 
 const Header: React.FC = () => {
   const dispatch = useDispatch();
