@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/store";
 import { Link } from "react-router-dom";
-import { logout } from "@/store/slices/authSlice"; // Update if named differently
+import { logout } from "@/store/slices/authSlice"; 
 import ResearchChatLogo from "./ChattrLogo";
 
 const Header: React.FC = () => {
