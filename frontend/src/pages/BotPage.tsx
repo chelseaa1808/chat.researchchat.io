@@ -3,7 +3,6 @@ import { useGetBotsQuery } from "../store/apis/chatApi";
 import BotTable from "../components/BotTable";
 import { useNavigate } from "react-router-dom";
 
-
 const BotPage: React.FC = () => {
   const { data, isLoading, isError } = useGetBotsQuery();
   const navigate = useNavigate();
@@ -29,15 +28,12 @@ const BotPage: React.FC = () => {
         </button>
       </div>
 
-      {isLoading ? (
-        <p className="text-gray-500 dark:text-gray-400">Loading bots...</p>
-      ) : isError ? (
-        <p className="text-red-600 dark:text-red-400">Failed to load bots.</p>
-      ) : (
-        <BotTable headers={headers} tableData={data ?? []} />
+      {!isLoading && !isError && data && (
+        <BotTable headers={headers} tableData={data} />
       )}
     </div>
   );
 };
 
 export default BotPage;
+
