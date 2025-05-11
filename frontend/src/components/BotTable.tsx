@@ -11,7 +11,7 @@ interface Header {
   name: string;
 }
 interface BotTableProps {
-  headers: string[];
+  headers: Header[];
   tableData: BotData[];
 }
 
