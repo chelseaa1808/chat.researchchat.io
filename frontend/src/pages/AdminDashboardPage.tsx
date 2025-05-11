@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { useGetMessagesQuery } from "@/store/apis/chatApi";
 import { useGetCurrentUserQuery } from "@/store/apis/authApi";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
+import PathConstants from "@/routes/PathConstants";
 import { Link } from "react-router-dom";
+
 
 const AdminDashboardPage: React.FC = () => {
   const { data: currentUser } = useGetCurrentUserQuery();
@@ -23,12 +25,12 @@ const AdminDashboardPage: React.FC = () => {
 
       {/* Quick Navigation Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-        <AdminCard title="Manage Bots" link="/adminpanel/bots" />
-        <AdminCard title="Conversations" link="/adminpanel/conversations" /> 
-        <AdminCard title="Chat Pages" link="/adminpanel/chats" /> 
-        <AdminCard title="Conditions" link="/adminpanel/conditions" /> 
-        <AdminCard title="User Profiles" link="/adminpanel/profile" />
-        <AdminCard title="Analytics Export" link="#analytics" /> #check
+        <AdminCard title="Manage Bots" link={PathConstants.ADMIN_BOTS} />
+        <AdminCard title="Conversations" link={PathConstants.ADMIN_CONVERSATIONS} />
+        <AdminCard title="Chat Pages" link={PathConstants.ADMIN_CHATS} />
+        <AdminCard title="Conditions" link={PathConstants.ADMIN_CONDITIONS} />
+        <AdminCard title="User Profiles" link={PathConstants.ADMIN_PROFILE} />
+        <AdminCard title="Analytics Export" link="#analytics" /> 
       </div>
 
       {/* Analytics & Export Section */}
