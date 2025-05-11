@@ -27,10 +27,6 @@ const BotPage: React.FC = () => {
           New Bot
         </button>
       </div>
-
-      {!isLoading && !isError && data && (
-        <BotTable headers={headers} tableData={data} />
-      )}
     </div>
   );
 };
