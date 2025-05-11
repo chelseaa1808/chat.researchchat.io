@@ -24,11 +24,11 @@ const AdminDashboardPage: React.FC = () => {
       {/* Quick Navigation Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
         <AdminCard title="Manage Bots" link="/adminpanel/bots" />
-        <AdminCard title="Conversations" link="/adminpanel/conversations" />
-        <AdminCard title="Chat Pages" link="/adminpanel/chatpages" />
-        <AdminCard title="Conditions" link="/adminpanel/conditions" />
-        <AdminCard title="User Profiles" link="/adminpanel/users" />
-        <AdminCard title="Analytics Export" link="#analytics" />
+        <AdminCard title="Conversations" link="/adminpanel/conversations" /> 
+        <AdminCard title="Chat Pages" link="/adminpanel/chats" /> 
+        <AdminCard title="Conditions" link="/adminpanel/conditions" /> 
+        <AdminCard title="User Profiles" link="/adminpanel/profile" />
+        <AdminCard title="Analytics Export" link="#analytics" /> #check
       </div>
 
       {/* Analytics & Export Section */}
