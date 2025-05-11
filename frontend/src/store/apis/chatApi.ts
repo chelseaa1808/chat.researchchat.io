@@ -35,9 +35,18 @@ export const chatApi = createApi({
   tagTypes: ["Messages", "Bots", "Conversations"],
   endpoints: (builder) => ({
     // Bots
-    getBots: builder.query<any[], void>({
+    getBots: builder.query<Bot[], void>({
       query: () => `/bots/`,
       providesTags: ["Bots"],
+    }),
+
+    addBot: builder.mutation<Bot, Partial<Bot>>({
+      query: (botData) => ({
+        url: "/bots/",
+        method: "POST",
+        body: botData,
+      }),
+      invalidatesTags: ["Bots"],
     }),
 
     // Conversations
@@ -95,6 +104,7 @@ export const chatApi = createApi({
             draft.push(optimisticMessage);
           })
         );
+        const [addBot] = useAddBotMutation();
 
         try {
           await queryFulfilled;
@@ -108,11 +118,11 @@ export const chatApi = createApi({
 
 export const {
   useGetBotsQuery,
+  useAddBotMutation,
   useGetConversationsQuery,
   useGetConversationQuery,
   useCreateConversationMutation,
   useGetMessagesQuery,
   useSendMessageMutation,
 } = chatApi;
-
 
