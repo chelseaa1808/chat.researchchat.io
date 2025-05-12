@@ -243,13 +243,13 @@ ACCOUNT_EMAIL_VERIFICATION = "optional"  # use "mandatory" if using email confir
 
 
 # Optional: dev email preview
-EMAIL_BACKEND = env("EMAIL_BACKEND", default="django.core.mail.backends.console.EmailBackend")
-EMAIL_HOST = env("EMAIL_HOST")
-EMAIL_PORT = env.int("EMAIL_PORT")
-EMAIL_HOST_USER = env("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
-EMAIL_USE_TLS = env.bool("EMAIL_USE_TLS")
-DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL")
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.sendgrid.net"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "apikey"
+EMAIL_HOST_PASSWORD = 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
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = "ResearchChat <noreply@researchchat.io>"
 
 # Optional: login/logout redirect paths
 LOGIN_REDIRECT_URL = "/"
