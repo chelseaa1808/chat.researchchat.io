@@ -36,3 +36,22 @@ chat.researchchat.io/
 ├── users/              # Django custom user model, signals
 ├── .github/            # (If CI/CD is added)
 └── README_DEV.md       # You are here
+
+---
+
+
+**## In Progress / Areas for Collaboration**
+
+ Secure CI/CD pipeline to enterprise repo
+
+ Memory capsule design for persistent bot identity, various links to the chatpage, and conversation creation
+
+ Multi-role access for researchers vs. participants
+
+ Integration of chat memory tracing and export functionalities
+
+ MFA and admin invite system via email
+
+
+
+
