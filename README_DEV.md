@@ -22,6 +22,22 @@ The current setup supports a Django backend, a React frontend built with Vite, a
 
 ---
 
+## In Progress/Areas of Collaboration 
+ Secure CI/CD pipeline to enterprise repo
+
+ Memory capsule design for persistent bot identity, various links to the chatpage, and conversation creation
+
+ Multi-role access for researchers vs. participants
+
+ Integration of chat memory tracing and export functionalities
+
+ MFA and admin invite system via email
+
+
+
+
+---
+
 ## Repo Structure
 
 ```plaintext
@@ -37,20 +53,7 @@ chat.researchchat.io/
 ├── .github/            # (If CI/CD is added)
 └── README_DEV.md       # You are here
 
----
 
-
-**## In Progress / Areas for Collaboration**
-
- Secure CI/CD pipeline to enterprise repo
-
- Memory capsule design for persistent bot identity, various links to the chatpage, and conversation creation
-
- Multi-role access for researchers vs. participants
-
- Integration of chat memory tracing and export functionalities
-
- MFA and admin invite system via email
 
 
 
