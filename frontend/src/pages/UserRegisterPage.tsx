@@ -37,7 +37,6 @@ const UserRegisterPage: React.FC = () => {
   
       // Redirect after registration
         navigate(PathConstants.LOGIN);
-      }
     } catch (err: any) {
       console.error("Registration failed:", err);
       
