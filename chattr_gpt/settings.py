@@ -247,7 +247,7 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.sendgrid.net"
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "apikey"
-EMAIL_HOST_PASSWORD = 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
+EMAIL_HOST_PASSWORD = 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
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = "ResearchChat <noreply@researchchat.io>"
 
