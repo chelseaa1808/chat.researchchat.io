@@ -26,8 +26,7 @@ const UserRegisterPage: React.FC = () => {
 
   const submitForm = async (data: RegisterFormInputs) => {
     console.log("Registering with data:", data);
-
-    try {
+    
       try {
         const result = await registerUser({
           username: data.username,
